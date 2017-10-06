@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="banner">
-
     </div>
     <ul class="menu">
         <li class="menuitem"><a href="/index.html">Home</a></li>
@@ -19,6 +18,5 @@
         <div id="pakket2"></div>
         <div id="pakket3"></div>
         <br>
-
 </body>
 </html>

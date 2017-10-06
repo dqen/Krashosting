@@ -9,20 +9,11 @@
     height: 400px;
     background-color: red;
 }
-div.scrollmenu {
-    background-color: deepskyblue;
-    overflow: auto;
-    white-space: nowrap;
-}
-
-div.scrollmenu  {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-}
-
-div.scrollmenu :hover {
-    background-color: #777;
+.banner{
+    background-image: url("../images/bannerimage.jpg");
+    background-color: silver;
+    background-size: cover;
+    /*width: 1200px;*/
+    height: 600px;
+    align-content: center;
 }

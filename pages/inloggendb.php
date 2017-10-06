@@ -9,9 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($r["email"] === $_POST["email"]){
         session_start();
         $_POST["name"] = $r["email"];
-        header("location:loginsucces.php");
     }
 }else{
-    header("location:inloggendb.php");
 }
 ?>

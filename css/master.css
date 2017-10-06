@@ -9,3 +9,11 @@
     height: 400px;
     background-color: red;
 }
+.banner{
+    background-image: url("../images/bannerimage.jpg");
+    background-color: silver;
+    background-size: cover;
+    /*width: 1200px;*/
+    height: 600px;
+    align-content: center;
+}

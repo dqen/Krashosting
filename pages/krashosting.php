@@ -1,5 +1,6 @@
 <?php
 session_start();
+echo($_SESSION["error"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +16,7 @@ session_start();
     <li class="menuitem"><a href="over_ons.html">over ons</a></li>
 </ul>
 <form action="inloggendb.php" method="POST">
+    <p><?php echo $_SESSION["text"]?></p>
     <input type="email" name="email"  placeholder="email"><br>
     <input type="password" name="wachtwoord" placeholder="wachtwoord"><br>
     <input type="submit" placeholder="verzenden">

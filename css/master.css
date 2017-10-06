@@ -1,8 +1,10 @@
 .menuitem{
-
+    display: flex;
+    flex-wrap: wrap;
 }
 #menu{
     background-color: deepskyblue;
+    margin-left: 200px;
 }
 #test{
     width: 600px;
@@ -10,10 +12,12 @@
     background-color: red;
 }
 .banner{
-    background-image: url("../images/bannerimage.jpg");
+    margin-top: -50px;
+    margin-left: 19%;
+    background-image: url("../images/untitled-1.jpg");
     background-color: silver;
     background-size: cover;
-    /*width: 1200px;*/
+    width: 1200px;
     height: 600px;
     align-content: center;
 }

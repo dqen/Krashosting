@@ -13,7 +13,6 @@
     <ul class="menu">
         <li class="menuitem"><a href="/index.html">Home</a></li>
         <li class="menuitem"><a href="pages/contact.html">Contact</a></li>
-        <li class="menuitem"><a href="over_ons.html">over ons</a></li>
     </ul>
     <div class="container">
         <div id="pakket1"></div>

@@ -1,13 +1,12 @@
 <?php
 session_start();
-var_dump($_SESSION)
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>login</title>
-    <link rel="stylesheet" href="css/master.css" type="text/css">
+    <link rel="stylesheet" href="../css/master.css" type="text/css">
 </head>
 <body>
 <ul id="menu">

@@ -6,32 +6,46 @@
  * Time: 10:20
  */
 
-// Start connect to database
+class newsarticle {
 
-$newsdatabase = new mysqli("localhost", "root", "root", "nieuws");
+    private $database;
+    private $assoc;
 
-$newssnippets = $newsdatabase->query("SELECT idnieuws, header, articlesnippet FROM nieuwsitems;");
+    public function __construct($nieuwsid) {
 
-$newssnippetsassoc = $newssnippets->fetch_assoc();
+        // Establish connection to database
+        $this->database = new mysqli("localhost", "root", "root", "nieuws");
+//        if($this->database->errno) {
+//            return "Failed to establish a connection to the database: " . $this->database->connect_error;
+//        }
 
-// End connect to database
-//
-// Variables for printing the table contents
+        $query = $this->database->query("SELECT * FROM nieuwsitems WHERE 'nieuwsid' = $nieuwsid;");
 
-// -- Variable for newsheader
-$newsheader = $newssnippetsassoc["header"];
+        $this->assoc = $query->fetch_assoc();
+    }
 
-// -- Variable for newssnippet
-$newsarticlesnippet = $newssnippetsassoc["articlesnippet"];
+    public function get_item($neededitem) {
+        return $this->assoc["$neededitem"];
+    }
 
-// -- Variable for newsID (I don't think it's needed anywhere, but just so it's not missed.
-$newsid = $newssnippetsassoc["idnieuws"];
+
+}
 
 /** TL;DR:
- *  The variables usable for printing the News Article Snippets are as follows:
  *
- *  $newsheader = Returns the Header of the Article.
- *  $newsarticlesnippet = Returns the first 2 sentences of the news Article.
- *  $newsid = Returns the News ID.
+ *  There's 4 "items" you can call using the "get_assoc()". They are as follows:
+ *
+ *  idnieuws        : Returns the ID of the row.
+ *  header          : Returns the HEADER of the news article.
+ *  articlesnippet  : Returns a snippet of the news article.
+ *  article         : Returns the entire article, that does NOT include the header.
  *
  */
+
+// Quick test
+
+$article = new newsarticle(1);
+
+$articletext = $article->get_item("article");
+
+var_dump($articletext);

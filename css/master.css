@@ -1,0 +1,28 @@
+.menuitem{
+
+}
+#menu{
+    background-color: deepskyblue;
+}
+#test{
+    width: 600px;
+    height: 400px;
+    background-color: red;
+}
+div.scrollmenu {
+    background-color: deepskyblue;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu  {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.scrollmenu :hover {
+    background-color: #777;
+}

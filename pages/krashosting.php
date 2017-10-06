@@ -10,10 +10,11 @@ echo($_SESSION["error"]);
     <link rel="stylesheet" href="../css/master.css" type="text/css">
 </head>
 <body>
+<div class="banner">
+    </div>
 <ul id="menu">
     <li class="menuitem"><a href="index.html">Home</a></li>
     <li class="menuitem"><a href="contact.html">Contact</a></li>
-    <li class="menuitem"><a href="over_ons.html">over ons</a></li>
 </ul>
 <form action="inloggendb.php" method="POST">
     <p><?php echo $_SESSION["text"]?></p>

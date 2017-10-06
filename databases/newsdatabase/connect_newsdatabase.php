@@ -10,3 +10,4 @@ $newsdatabase = new mysqli("localhost", "root", "root", "nieuws");
 
 $newssnippets = $newsdatabase->query("SELECT idnieuws, header, articlesnippet FROM 'nieuwsitems'");
 
+test

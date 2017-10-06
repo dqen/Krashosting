@@ -8,4 +8,7 @@
 
 $newsdatabase = new mysqli("localhost", "root", "root", "nieuws");
 
-$newssnippets = $newsdatabase->query("SELECT idnieuws, header, articlesnippet FROM 'nieuwsitems'");
+$newssnippets = $newsdatabase->query("SELECT * FROM nieuwsitems;");
+
+$newssnippetsassoc = $newssnippets->fetch_assoc();
+

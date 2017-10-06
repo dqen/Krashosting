@@ -14,6 +14,7 @@ session_start();
 <ul id="menu">
     <li class="menuitem"><a href="index.html">Home</a></li>
     <li class="menuitem"><a href="contact.html">Contact</a></li>
+    <li class="menuitem"><a href="pages/krashosting.php">login</a></li>
 </ul>
 <form action="inloggendb.php" method="POST">
     <input type="email" name="email"  placeholder="email"><br>

@@ -5,9 +5,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = "SELECT wachtwoord, email, admin FROM login WHERE email = '$email';";
     $query = $mysqli->query($sql);
     $r= $query->fetch_assoc();
-    if ($r["email"] == $_POST["email"]){
+    if ($r["email"] === $_POST["email"] && $r["wachtwoord"] === $_POST["wachtwoord"]){
         session_start();
         header("location:../index.php");
+    }else{
+        header("location:krashosting.php");
     }
 }else{
     header("location:krashosting.php");

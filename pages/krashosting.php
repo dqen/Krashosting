@@ -1,6 +1,5 @@
 <?php
 
-var_dump($_COOKIE);
 ?>
 <!DOCTYPE html>
 <html lang="en">

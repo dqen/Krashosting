@@ -13,7 +13,6 @@ error_reporting(E_ALL);
 class News {
 
     private $database;
-    private $assoc;
 
     public function __construct() {
 
@@ -50,6 +49,36 @@ class News {
 
     public function update_newsitem($id, $title, $article) {
 
+        $snippet = substr($article, 0, 165) . "...";
+
+        $esctitle = $this->database->real_escape_string($title);
+        $escarticle = $this->database->real_escape_string($article);
+        $escsnippet = $this->database->real_escape_string($snippet);
+
+        if ($title == "") {
+            if ($this->database->query("UPDATE nieuwsitem SET articlesnippet = '$escsnippet', article = '$escarticle' WHERE idnieuws = '$id';")) {
+                return "Article of $id successfully updated.";
+            } else {
+                return "Something went wrong while updating the article...";
+            }
+        } else if ($article == "") {
+            if ($this->database->query("UPDATE nieuwsitem SET header = '$esctitle' WHERE idnieuws = '$id';")) {
+                return "Header of $id successfully updated.";
+            } else {
+                return "Something went wrong while updating the header...";
+            }
+        } else if ($id == "") {
+
+            return "ERROR! ID is required!";
+        } else if ($article == "" && $title == ""){
+
+            return "You have to update something...";
+        } else {
+            $this->database->query("UPDATE niewsitem SET header = '$esctitle', articlesnippet = '$escsnippet', article = '$escarticle' WHERE idnieuws = '$id';");
+
+            return "Both article & header of $id have been updated!";
+        }
+
     }
 }
 
@@ -62,13 +91,24 @@ class News {
  *  articlesnippet  : Returns a snippet of the news article.
  *  article         : Returns the entire article, that does NOT include the header.
  *
- *  You can now also use "add_newsitem(@param, @param). It requires 2 @parameters:
+ *  You can now also use "add_newsitem(@param, @param)". It requires 2 parameters:
  *
- *  "title"         : STRING    - The title of the new news article
- *  "article"       : STRING    - The article itself. The function automatically creates a snippet.
+ *  "title"         : STRING        - The title of the new news article
+ *  "article"       : STRING        - The article itself. The function automatically creates a snippet.
  *
  *  The "add_newsitem()" does NOT check for XSS OR validates the inputs. it DOES however put them
  *  through the "real_escape_string()" function.
+ *
+ *  You can also update an article using the "update_newsitem(param, param, param)". It requires 3 parameters.
+ *  If you do not want to update, for example, a header, then you have to leave the field empty. ex:
+ *
+ *      $article->update_newsitem([id] 1, [header/title] "", [article]"updated article")
+ *
+ *  The parameters are as follows:
+ *
+ *  "id"            : STRING / INT  - This declares what article you want to edit.
+ *  "title"         : STRING        - The new or updated title for the article.
+ *  "article"       : STRING        - The new or updated article.
  *
  */
 
@@ -78,8 +118,10 @@ $article = new News();
 
 $articletext = $article->get_item("2", "article");
 
-$update = $article->add_newsitem("News Item Test", "This should be an article with at least onehundredandsixtyfive characters. This should not take too long, but It's hard to think of a random string of words that don't really have anything in common. The best would be if this actually surpasses onehundredandsixtyfive characters, so I can test if my class function works all right and fine.");
+//$update = $article->add_newsitem("News Item Test", "This should be an article with at least onehundredandsixtyfive characters. This should not take too long, but It's hard to think of a random string of words that don't really have anything in common. The best would be if this actually surpasses onehundredandsixtyfive characters, so I can test if my class function works all right and fine.");
 
-echo $update;
+echo $article->update_newsitem(4, "Brand new title!", "");
 
-var_dump($articletext);
+//echo $update;
+
+//var_dump($articletext);

@@ -6,32 +6,49 @@
  * Time: 10:20
  */
 
-// Start connect to database
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-$newsdatabase = new mysqli("localhost", "root", "root", "nieuws");
+class newsarticle {
 
-$newssnippets = $newsdatabase->query("SELECT idnieuws, header, articlesnippet FROM nieuwsitems;");
+    private $database;
+    private $assoc;
 
-$newssnippetsassoc = $newssnippets->fetch_assoc();
+    public function __construct() {
 
-// End connect to database
-//
-// Variables for printing the table contents
+        // Establish connection to database
+        $this->database = new mysqli("localhost", "root", "root", "nieuws");
 
-// -- Variable for newsheader
-$newsheader = $newssnippetsassoc["header"];
+    }
 
-// -- Variable for newssnippet
-$newsarticlesnippet = $newssnippetsassoc["articlesnippet"];
+    public function get_item($id, $neededitem) {
 
-// -- Variable for newsID (I don't think it's needed anywhere, but just so it's not missed.
-$newsid = $newssnippetsassoc["idnieuws"];
+        $query = $this->database->query("SELECT $neededitem FROM nieuwsitems WHERE idnieuws = '$id';");
+
+        $assoc = $query->fetch_row();
+
+        var_dump($assoc);
+    }
+
+
+}
 
 /** TL;DR:
- *  The variables usable for printing the News Article Snippets are as follows:
  *
- *  $newsheader = Returns the Header of the Article.
- *  $newsarticlesnippet = Returns the first 2 sentences of the news Article.
- *  $newsid = Returns the News ID.
+ *  There's 4 "items" you can call using the "get_item()". They are as follows:
+ *
+ *  idnieuws        : Returns the ID of the row.
+ *  header          : Returns the HEADER of the news article.
+ *  articlesnippet  : Returns a snippet of the news article.
+ *  article         : Returns the entire article, that does NOT include the header.
  *
  */
+
+// Quick test
+
+$article = new newsarticle();
+
+$articletext = $article->get_item("1", "idnieuws");
+
+var_dump($articletext);

@@ -15,6 +15,7 @@ var_dump($_COOKIE);
 <ul id="menu">
     <li class="menuitem"><a href="index.html">Home</a></li>
     <li class="menuitem"><a href="contact.html">Contact</a></li>
+    <li class="menuitem"><a href="pages/krashosting.php">login</a></li>
 </ul>
 <form action="inloggendb.php" method="POST">
     <p><?php echo $_COOKIE["text"]?></p>

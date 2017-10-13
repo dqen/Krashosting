@@ -42,6 +42,7 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`idlogin`, `email`, `wachtwoord`, `admin`) VALUES
 (1, 'robinmeijs@ictmbo.nl', 'hallo', 0),
 (2, 'diegobosch@ictmbo.nl', 'doei', 1);
+(3, 'gijsverhoeven@ictmbo.nl', 'password', 1);
 
 --
 -- Indexes for dumped tables

@@ -1,11 +1,10 @@
 .banner{
-    margin-top: -50px;
-    margin-left: 19%;
     background-image: url("../images/bannerimage.jpg");
     background-color: silver;
     background-size: cover;
     width: 1200px;
     height: 600px;
+    margin-left: 19%;
 }
 .menuitem {
     float: left;
@@ -35,37 +34,46 @@ li a:hover {
     background-color: lightslategray;
 }
 .container{
+    width: 80%;
+    padding: 20px;
     margin-top: 20px;
     margin-left: 19%;
-    /*width:800px;*/
     overflow: hidden;
 }
 #pakket1{
     width: 250px;
     height: 400px;
     background-color: red;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-right: 65px;
 }
 #pakket2{
     width: 250px;
     height: 400px;
     background-color: green;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-right: 65px;
 }
 #pakket3{
     width: 250px;
     height: 400px;
     background-color: lawngreen;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-right: 65px;
 }
 #pakket4{
     width: 250px;
     height: 400px;
     background-color: deeppink;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 #nieuws1{
     width: 250px;

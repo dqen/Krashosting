@@ -1,0 +1,27 @@
+#pakket1{
+    width: 250px;
+    height: 400px;
+    background-color: black;
+    display: inline-block;
+    margin-right: 65px;
+}
+#pakket2{
+     width: 250px;
+     height: 400px;
+     background-color: green;
+     display: inline-block;
+     margin-right: 65px;
+ }
+#pakket3{
+    width: 250px;
+    height: 400px;
+    background-color: lawngreen;
+    display: inline-block;
+    margin-right: 65px;
+}
+#pakket4{
+    width: 250px;
+    height: 400px;
+    background-color: deeppink;
+    display: inline-block;
+}

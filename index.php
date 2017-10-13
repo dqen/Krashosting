@@ -11,6 +11,7 @@
 
 </head>
 <body>
+
     <div class="banner">
     </div>
     <ul class="menu">
@@ -20,15 +21,15 @@
         <li class="menuitem"><a href="pages/pakketen.html">paketten</a></li>
     </ul>
     <div class="container">
-        <div id="pakket1"></div>
-        <div id="pakket2"></div>
-        <div id="pakket3"></div>
-        <div id="pakket4"></div>
-        <div id="break"></div>
+            <div id="pakket1"></div>
+            <div id="pakket2"></div>
+            <div id="pakket3"></div>
+            <div id="pakket4"></div>
+            <div id="break"></div>
 
-        <div id="nieuws1"></div>
-        <div id="nieuws2"></div>
-        <div id="nieuws3"></div>
+            <div id="nieuws1"></div>
+            <div id="nieuws2"></div>
+            <div id="nieuws3"></div>
     </div>
 </body>
 </html>

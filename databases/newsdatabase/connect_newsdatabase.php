@@ -56,13 +56,13 @@ class News {
         $escsnippet = $this->database->real_escape_string($snippet);
 
         if ($title == "") {
-            if ($this->database->query("UPDATE nieuwsitem SET articlesnippet = '$escsnippet', article = '$escarticle' WHERE idnieuws = '$id';")) {
+            if ($this->database->query("UPDATE nieuwsitems SET articlesnippet = '$escsnippet', article = '$escarticle' WHERE idnieuws = '$id';")) {
                 return "Article of $id successfully updated.";
             } else {
                 return "Something went wrong while updating the article...";
             }
         } else if ($article == "") {
-            if ($this->database->query("UPDATE nieuwsitem SET header = '$esctitle' WHERE idnieuws = '$id';")) {
+            if ($this->database->query("UPDATE nieuwsitems SET header = '$esctitle' WHERE idnieuws = '$id';")) {
                 return "Header of $id successfully updated.";
             } else {
                 return "Something went wrong while updating the header...";
@@ -74,7 +74,7 @@ class News {
 
             return "You have to update something...";
         } else {
-            $this->database->query("UPDATE niewsitem SET header = '$esctitle', articlesnippet = '$escsnippet', article = '$escarticle' WHERE idnieuws = '$id';");
+            $this->database->query("UPDATE nieuwsitems SET header = '$esctitle', articlesnippet = '$escsnippet', article = '$escarticle' WHERE idnieuws = '$id';");
 
             return "Both article & header of $id have been updated!";
         }

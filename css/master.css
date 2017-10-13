@@ -37,6 +37,8 @@ li a:hover {
 .container{
     margin-top: 20px;
     margin-left: 19%;
+    /*width:800px;*/
+    overflow: hidden;
 }
 #pakket1{
     width: 250px;

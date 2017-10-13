@@ -1,6 +1,6 @@
 <?php
-session_start();
-echo($_SESSION["error"]);
+
+var_dump($_COOKIE);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,7 @@ echo($_SESSION["error"]);
     <li class="menuitem"><a href="contact.html">Contact</a></li>
 </ul>
 <form action="inloggendb.php" method="POST">
-    <p><?php echo $_SESSION["text"]?></p>
+    <p><?php echo $_COOKIE["text"]?></p>
     <input type="email" name="email"  placeholder="email"><br>
     <input type="password" name="wachtwoord" placeholder="wachtwoord"><br>
     <input type="submit" placeholder="verzenden">

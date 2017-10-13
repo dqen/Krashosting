@@ -6,26 +6,29 @@
  * Time: 10:20
  */
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 class newsarticle {
 
     private $database;
     private $assoc;
 
-    public function __construct($nieuwsid) {
+    public function __construct() {
 
         // Establish connection to database
         $this->database = new mysqli("localhost", "root", "root", "nieuws");
-//        if($this->database->errno) {
-//            return "Failed to establish a connection to the database: " . $this->database->connect_error;
-//        }
 
-        $query = $this->database->query("SELECT * FROM nieuwsitems WHERE 'nieuwsid' = $nieuwsid;");
-
-        $this->assoc = $query->fetch_assoc();
     }
 
-    public function get_item($neededitem) {
-        return $this->assoc["$neededitem"];
+    public function get_item($id, $neededitem) {
+
+        $query = $this->database->query("SELECT $neededitem FROM nieuwsitems WHERE idnieuws = '$id';");
+
+        $assoc = $query->fetch_row();
+
+        var_dump($assoc);
     }
 
 
@@ -33,7 +36,7 @@ class newsarticle {
 
 /** TL;DR:
  *
- *  There's 4 "items" you can call using the "get_assoc()". They are as follows:
+ *  There's 4 "items" you can call using the "get_item()". They are as follows:
  *
  *  idnieuws        : Returns the ID of the row.
  *  header          : Returns the HEADER of the news article.
@@ -44,8 +47,8 @@ class newsarticle {
 
 // Quick test
 
-$article = new newsarticle(1);
+$article = new newsarticle();
 
-$articletext = $article->get_item("article");
+$articletext = $article->get_item("1", "idnieuws");
 
 var_dump($articletext);

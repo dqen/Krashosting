@@ -1,0 +1,35 @@
+.container{
+    margin-top: 10vh;
+}
+.foto_overons1{
+    width: 400px;
+    height: 300px;
+    background-color: red;
+    border: solid black 2px;
+.foto_overons1{
+    width: 400px;
+    height: 300px;
+    background-color: red;
+    border: solid black 2px;
+    display: inline-flex;
+    flex-direction: row;
+}
+}
+.foto_overons2{
+    width: 400px;
+    height: 300px;
+    background-color: red;
+    border: solid black 2px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#text_overons{
+    width: 60vw;
+    height: 604px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: azure;
+    border: solid black 2px;
+}

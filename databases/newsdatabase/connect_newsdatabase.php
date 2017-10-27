@@ -111,17 +111,3 @@ class News {
  *  "article"       : STRING        - The new or updated article.
  *
  */
-
-// Quick test
-
-$article = new News();
-
-$articletext = $article->get_item("2", "article");
-
-//$update = $article->add_newsitem("News Item Test", "This should be an article with at least onehundredandsixtyfive characters. This should not take too long, but It's hard to think of a random string of words that don't really have anything in common. The best would be if this actually surpasses onehundredandsixtyfive characters, so I can test if my class function works all right and fine.");
-
-echo $article->update_newsitem(4, "Brand new title!", "");
-
-//echo $update;
-
-//var_dump($articletext);

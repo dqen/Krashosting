@@ -25,11 +25,12 @@
     flex-wrap: wrap;
 }
 #text_overons{
-    width: 60vw;
+    width: 40vw;
     height: 604px;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: azure;
     border: solid black 2px;
+    position: relative;
 }

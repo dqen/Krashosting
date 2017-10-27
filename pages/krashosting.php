@@ -25,48 +25,33 @@ session_start();
     }
     </style>
     <script type="text/javascript"> 
-    function preventEnterKey(e) {
-    
-    e = e || window.event;
-    var keycode = e.which || e.keyCode;
-    if (keycode == 13) {
+ 
+
+function disableEnterKey(e){ 
+var key; 
+    if(window.event){ 
+    key = window.event.keyCode; 
+    } else { 
+    key = e.which;      
+    } 
+    if(key == 13){ 
+    return false;
+    } else { 
+    return true; 
+    } 
         
-        if (e.preventDefault) {
-            e.preventDefault();
-        } else { 
-            e.returnValue = false;
-        }
-    
-        if (e.stopPropagation) { 
-            e.stopPropagation();
-        } else {
-            e.cancelBubble = true;
-        }
-    
-        return false;
-    }
-}
-    function disableAllInputs() {
-        try {
-            var els = document.getElementsByTagName('input');
-            if (els) {
-                for ( var i = 0; i < els.length; i++) {
-                    els[i].onkeydown = preventEnterKey;
-                }
-            }
-        } catch (e) {
-        }
-    }
-</script>
+} 
+</script> 
 </head>
 <body>
 <?php echo $_SESSION["error"];?>
+<?php session_destroy()?>
 <div class="banner">
     </div>
 <ul id="menu">
-    <li class="menuitem"><a href="index.html">Home</a></li>
+    <li class="menuitem"><a href="../index.html">Home</a></li>
     <li class="menuitem"><a href="contact.html">Contact</a></li>
-    <li class="menuitem"><a href="pages/krashosting.php">login</a></li>
+    <li class="menuitem"><a href="krashosting.php">login</a></li>
 </ul>
 
 <form action="inloggendb.php" method="POST" id="form" onload="disableAllInputs()">

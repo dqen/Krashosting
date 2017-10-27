@@ -5,9 +5,7 @@ $mysqli = new mysqli("localhost", "root", "root", "login_krashosting");
 $sql3 = "SELECT attempt FROM login WHERE email = '$email';";
 $query = $mysqli->query($sql3);
 $r= $query->fetch_assoc();
-if($r["attempt"] >= 2){
-    header("location:krashosting.php");
-}elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $mysqli = new mysqli("localhost", "root", "root", "login_krashosting");
     $sql = "SELECT wachtwoord, email, admin, attempt FROM login WHERE email = '$email';";
@@ -34,6 +32,5 @@ if($r["attempt"] >= 2){
     }
 }else{
 header("location:krashosting.php");
-exit();
 }
 ?>

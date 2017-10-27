@@ -1,8 +1,8 @@
 <?php
 
-//    ini_set('display_errors', 1);
-//    ini_set('display_startup_errors', 1);
-//    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 
     require_once('databases/newsdatabase/connect_newsdatabase.php');
 
@@ -35,8 +35,8 @@
             <div id="break"></div>
 
             <div id="nieuws1"><h3><?php echo $article->get_item(1, "header"); ?></h3> <p><?php echo $article->get_item(1, "articlesnippet"); ?></p></div>
-            <div id="nieuws2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tortor in sem condimentum convallis nec congue ante. Donec orci velit, faucibus quis venenatis ut, pretium ac sapien. Phasellus eu turpis nunc. Phasellus dignissim tortor sit amet lorem gravida, eget tristique turpis condimentum. In hac habitasse platea dictumst. Morbi pharetra lectus et pellentesque imperdiet. Phasellus velit nibh, dictum non nisi et, rhoncus semper lectus. Nulla ultrices mollis enim at scelerisque. Nam consequat blandit eros ac lobortis. Sed vestibulum diam eget mauris finibus dignissim. Integer ex ligula, tempor ac ornare quis, pretium ut purus.</p></div>
-            <div id="nieuws3"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tortor in sem condimentum convallis nec congue ante. Donec orci velit, faucibus quis venenatis ut, pretium ac sapien. Phasellus eu turpis nunc. Phasellus dignissim tortor sit amet lorem gravida, eget tristique turpis condimentum. In hac habitasse platea dictumst. Morbi pharetra lectus et pellentesque imperdiet. Phasellus velit nibh, dictum non nisi et, rhoncus semper lectus. Nulla ultrices mollis enim at scelerisque. Nam consequat blandit eros ac lobortis. Sed vestibulum diam eget mauris finibus dignissim. Integer ex ligula, tempor ac ornare quis, pretium ut purus.</p></div>
+            <div id="nieuws2"><h3><?php echo $article->get_item(2, "header"); ?></h3> <p><?php echo $article->get_item(2, "articlesnippet"); ?></p></div>
+            <div id="nieuws3"><h3><?php echo $article->get_item(3, "header"); ?></h3> <p><?php echo $article->get_item(3, "articlesnippet"); ?></p></div>
     </div>
 </body>
 </html>

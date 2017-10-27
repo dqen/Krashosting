@@ -22,7 +22,7 @@
     <div class="banner">
     </div>
     <ul class="menu">
-        <li class="menuitem"><a href="/index.php">Home</a></li>
+        <li class="active"><a href="/index.php">Home</a></li>
         <li class="menuitem"><a href="pages/contact.html">Contact</a></li>
         <li class="menuitem"><a href="pages/over_ons.html">over ons</a></li>
         <li class="menuitem"><a href="pages/pakketen.html">paketten</a></li>

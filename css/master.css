@@ -73,10 +73,13 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    width: 23.2vw;
+    width: 23vw;
 }
 li a:hover {
     background-color: #111;
+}
+.active {
+    background-color: #4CAF50;
 }
 .container{
     width: 80%;
@@ -144,4 +147,7 @@ li a:hover {
 }
 #break{
     height: 30px;
+}
+body{
+    background-color: ghostwhite;
 }

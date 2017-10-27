@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 ?>
 <!DOCTYPE html>
@@ -8,55 +7,18 @@ session_start();
     <meta charset="UTF-8">
     <title>login</title>
     <link rel="stylesheet" href="../css/master.css" type="text/css">
-    <style>
-    #errormsg{
-        display: block;
-        background-color: black;
-        color: white;
-        width:500px;
-        height: 300px;
-        z-index: 100;
-        position: absolute;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    </style>
-    <script type="text/javascript"> 
- 
-
-function disableEnterKey(e){ 
-var key; 
-    if(window.event){ 
-    key = window.event.keyCode; 
-    } else { 
-    key = e.which;      
-    } 
-    if(key == 13){ 
-    return false;
-    } else { 
-    return true; 
-    } 
-        
-} 
-</script> 
 </head>
 <body>
-<?php echo $_SESSION["error"];?>
-<?php session_destroy()?>
 <div class="banner">
     </div>
 <ul id="menu">
-    <li class="menuitem"><a href="../index.html">Home</a></li>
+    <li class="menuitem"><a href="index.html">Home</a></li>
     <li class="menuitem"><a href="contact.html">Contact</a></li>
-    <li class="menuitem"><a href="krashosting.php">login</a></li>
+    <li class="menuitem"><a href="pages/krashosting.php">login</a></li>
 </ul>
-
-<form action="inloggendb.php" method="POST" id="form" onload="disableAllInputs()">
-    <p><?php echo $_SESSION["fout"]?></p>
-    <input type="email" name="email" placeholder="email"><br>
+<form action="inloggendb.php" method="POST">
+    <p><?php echo $_COOKIE["text"]?></p>
+    <input type="email" name="email"  placeholder="email"><br>
     <input type="password" name="wachtwoord" placeholder="wachtwoord"><br>
     <input type="submit" placeholder="verzenden">
 </form>

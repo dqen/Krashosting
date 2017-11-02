@@ -2,8 +2,11 @@
 session_start();
 $email = $_POST["email"];
 $mysqli = new mysqli("localhost", "root", "root", "login_krashosting");
+$sql3 = "SELECT attempt FROM login WHERE email = '$email';";
+$query = $mysqli->query($sql3);
 $r= $query->fetch_assoc();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $mysqli = new mysqli("localhost", "root", "root", "login_krashosting");
     $sql = "SELECT wachtwoord, email, admin, attempt FROM login WHERE email = '$email';";
     $query = $mysqli->query($sql);
     $r= $query->fetch_assoc();
@@ -26,8 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query = $mysqli1->query($sql1);
         header("location:krashosting.php");
         exit();
-    }
+}
 }else{
-    header("location:krashosting.php");
+header("location:krashosting.php");
 }
 ?>

@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/master.css" type="text/css">
-    <title>Title</title>
+    <title>contact</title>
 </head>
 <body>
+<div class="banner">
+</div>
+<ul class="menu">
+    <li class="menuitem"><a href="/index.php">Home</a></li>
+    <li class="active"><a href="contact.html">Contact</a></li>
+    <li class="menuitem"><a href="over_ons.html">over ons</a></li>
+    <li class="menuitem"><a href="pakketen.html">paketten</a></li>
+</ul>
+<div class="container">
+    <div><p>
+        email: contact@krashosting.nl<br>
+        tel:   013 539 7070 <br>
+        adres: Kasteeldreef 122, 5046 CV Tilburg
+    </p></div>
+    <div id="map" style="width:600px;height:400px"></div>
+</div>
 
+<script>
+    function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(51.572785, 5.0791122),
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCev8FTXWfDsFrCa6K5QM_ihQDIHXgz8Eo&callback=myMap"></script>
 </body>
 </html>

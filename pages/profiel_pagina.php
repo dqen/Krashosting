@@ -1,5 +1,9 @@
 <?php
     session_start();
+    // $result= "";
+    // if($_SESSION["admin"] == 1){
+    //     $result .= "";
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +14,11 @@
 </head>
 <body>
     <?php
-        echo $_SESSION["gebruiker"]
+        echo $_SESSION["gebruiker"];
+        echo "<br>";
+        echo $_SESSION["error"];
+
+
     ?>
 <form action="profiel_db.php" method="POST" class="form" onload="disableAllInputs()">
     <input type="password" name="oudwachtwoord" placeholder="oud wachtwoord"><br>

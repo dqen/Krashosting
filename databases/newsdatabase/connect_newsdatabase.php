@@ -84,9 +84,9 @@ class News {
 
 /** TL;DR:
  *
- *  There's 4 "items" you can call using the "get_item()". They are as follows:
+ *  There's 4 "items" you can call using the "get_item(@param, @param)". They are as follows:
  *
- *  idnieuws        : Returns the ID of the row.
+ *  idnieuws        : Returns the ID of the row. You need to enter this as the first parameter.
  *  header          : Returns the HEADER of the news article.
  *  articlesnippet  : Returns a snippet of the news article.
  *  article         : Returns the entire article, that does NOT include the header.
@@ -100,7 +100,7 @@ class News {
  *  through the "real_escape_string()" function.
  *
  *  You can also update an article using the "update_newsitem(param, param, param)". It requires 3 parameters.
- *  If you do not want to update, for example, a header, then you have to leave the field empty. ex:
+ *  If you do not want to update, for example, a header, then you have to leave the field empty. ID is required. ex:
  *
  *      $article->update_newsitem([id] 1, [header/title] "", [article]"updated article")
  *

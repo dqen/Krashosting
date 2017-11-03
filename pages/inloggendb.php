@@ -17,7 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($r["email"] === $_POST["email"] && $r["wachtwoord"] === $_POST["wachtwoord"]){
     $sql2 = "UPDATE login SET attempt = 0 WHERE email = '$email';";
     $query = $mysqli->query($sql2);
+    $admin = $r["admin"];
     $_SESSION["gebruiker"] = "$email";
+    $_SESSION["admin"] = "$admin";
     header("location:profiel_pagina.php");
     exit();
     }else{

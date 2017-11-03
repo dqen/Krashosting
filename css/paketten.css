@@ -1,7 +1,7 @@
 #pakket1{
     width: 250px;
     height: 600px;
-    background-color: black;
+    background-color: lightslategray;
     display: inline-block;
     margin-right: 65px;
     margin-left: -2%;
@@ -9,20 +9,20 @@
 #pakket2{
      width: 250px;
      height: 600px;
-     background-color: green;
+     background-color: lightslategray;
      display: inline-block;
      margin-right: 65px;
  }
 #pakket3{
     width: 250px;
     height: 600px;
-    background-color: lawngreen;
+    background-color: lightslategray;
     display: inline-block;
     margin-right: 65px;
 }
 #pakket4{
     width: 250px;
     height: 600px;
-    background-color: deeppink;
+    background-color: lightslategray;
     display: inline-block;
 }

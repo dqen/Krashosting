@@ -3,7 +3,7 @@
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_SESSION["gebruiker"] ;
-    $mysqli = new mysqli("localhost", "root", "root", "login_krashosting");
+    $mysqli = new mysqli("localhost", "root", "root", "krashosting");
     $sql = "SELECT wachtwoord FROM login WHERE email = '$email';";
     $query = $mysqli->query($sql);
     $r= $query->fetch_assoc();

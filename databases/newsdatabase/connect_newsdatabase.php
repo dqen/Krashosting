@@ -17,7 +17,7 @@ class News {
     public function __construct() {
 
         // Establish connection to database
-        $this->database = new mysqli("localhost", "root", "root", "nieuws");
+        $this->database = new mysqli("localhost", "root", "root", "krashosting");
 
     }
 

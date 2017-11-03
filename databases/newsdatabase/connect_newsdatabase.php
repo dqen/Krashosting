@@ -111,7 +111,3 @@ class News {
  *  "article"       : STRING        - The new or updated article.
  *
  */
-
-$newsitem = new News();
-
-echo $newsitem->get_item(1, 'header');

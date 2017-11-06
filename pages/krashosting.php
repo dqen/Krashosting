@@ -45,7 +45,7 @@
         <li class="menuitem"><a href="contact.html">Contact</a></li>
         <li class="menuitem"><a href="krashosting.php">login</a></li>
     </ul>
-    <form action="inloggendb.php" method="POST" class="form" onload="disableAllInputs()">
+    <form action="../databases/inloggendb.php" method="POST" class="form" onload="disableAllInputs()">
         <p><?php echo $_SESSION["fout"]?></p>
         <input type="email" name="email" placeholder="email"><br>
         <input type="password" name="wachtwoord" placeholder="wachtwoord"><br>

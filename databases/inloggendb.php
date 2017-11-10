@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $r= $query->fetch_assoc();
     if($r["attempt"] >= 2){
         $_SESSION["error"] = "<div id='errormsg'><p id='errormsg'> je account is voor veiligheidsredenen geblokkeerd.<br> contacteer de admin voor verderen informatie</p></div>";
-        header("location:krashosting.php");
+        header("location:../pages/krashosting.php");
     }
     if ($r["email"] === $_POST["email"] && $r["wachtwoord"] === $_POST["wachtwoord"]){
     $sql2 = "UPDATE login SET attempt = 0 WHERE email = '$email';";
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $admin = $r["admin"];
     $_SESSION["gebruiker"] = "$email";
     $_SESSION["admin"] = "$admin";
-    header("location:profiel_pagina.php");
+    header("location:../pages/profiel_pagina.php");
     exit();
     }else{
         $attempts = $r["attempt"];
@@ -29,10 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mysqli1 = new mysqli("localhost", "root", "root", "krashosting");
         $sql1 = "UPDATE login SET attempt = $attempts WHERE email = '$email';";
         $query = $mysqli1->query($sql1);
-        header("location:krashosting.php");
+        header("location:../pages/krashosting.php");
         exit();
 }
 }else{
-header("location:krashosting.php");
+header("location:../pages/krashosting.php");
 }
 ?>

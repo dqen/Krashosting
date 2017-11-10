@@ -86,7 +86,7 @@ class News {
  *
  *  There's 4 "items" you can call using the "get_item(@param, @param)". They are as follows:
  *
- *  idnieuws        : Returns the ID of the row. You need to enter this as the first parameter.
+ *  idnieuws        : Returns the ID of the row. You need to enter this as the first parameter aswell.
  *  header          : Returns the HEADER of the news article.
  *  articlesnippet  : Returns a snippet of the news article.
  *  article         : Returns the entire article, that does NOT include the header.

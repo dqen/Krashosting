@@ -1,3 +1,19 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$db = "krashosting";
+
+
+$conn = new mysqli($servername, $username, $password, $db);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
+//$sql = ;
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -17,7 +33,7 @@
             <li class="active"><a href="pakketen.html">paketten</a></li>
         </ul>
 
-        <div id="pakket1"></div>
+        <div id="pakket1"><?php  ?></div>
         <div id="pakket2"></div>
         <div id="pakket3"></div>
         <div id="pakket4"></div>

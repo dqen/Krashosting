@@ -12,7 +12,20 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-//$sql = ;
+
+$sql = "SELECT name, description FROM packages";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo  $row["name"]. "<br>" . $row["description"]. "<br>";
+    }
+} else{
+    echo "jammer joh";
+    }
+
+$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="nl">

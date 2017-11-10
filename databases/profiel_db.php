@@ -19,12 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "het is gelukt"; 
         }else{
             $_SESSION["error"] = 'the password does not meet the requirements!';
-            header("location:profiel_pagina.php");
+            header("location:../pages/profiel_pagina.php");
             exit();
         }
     }
 }else{
-    header("location:profiel_pagina.php");
+    header("location:../pages/profiel_pagina.php");
     exit();
 }
 ?>

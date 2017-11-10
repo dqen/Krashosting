@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo $wachtwoord ."<br>". $wachtwoord2 . "<br>" . $email;
     if($oudwachtwoord == $r["wachtwoord"] || $wachtwoord === $wachtwoord2){
         if(preg_match('/^(?=.*\d)(?=.*[A-Za-z])(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z!@#$%]{8,12}$/', $wachtwoord)) {
-            
             $sql1 = "UPDATE login SET wachtwoord = '$wachtwoord' WHERE email = '$email';";
             $query1 = $mysqli->query($sql1);
             echo "het is gelukt"; 

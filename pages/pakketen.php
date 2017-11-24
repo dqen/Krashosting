@@ -1,31 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$db = "krashosting";
-
-
-$conn = new mysqli($servername, $username, $password, $db);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
-
-
-$sql = "SELECT name, description FROM packages";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo  $row["name"]. "<br>" . $row["description"]. "<br>";
+    $mysqli = new mysqli("localhost", "root", "root", "krashosting");
+    $sql = "SELECT name, description FROM package";
+    $query = $mysqli->query($sql);
+    $result = array() ;
+    $i = 0;
+    while($r= $query->fetch_assoc()){
+        $return["$i"] = "{$r["name"]} , {$r["description"]}";
+        $i++;
     }
-} else{
-    echo "jammer joh";
-    }
-
-$conn->close();
+    echo "<pre>";
+    var_dump("{$return["0"]}");
+    echo "</pre>";
+    
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -46,7 +32,7 @@ $conn->close();
             <li class="active"><a href="pakketen.html">paketten</a></li>
         </ul>
 
-        <div id="pakket1"><?php  ?></div>
+        <div id="pakket1"><?php  $row["name"]?></div>
         <div id="pakket2"></div>
         <div id="pakket3"></div>
         <div id="pakket4"></div>

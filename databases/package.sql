@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 10, 2017 at 10:35 AM
+-- Generation Time: Nov 24, 2017 at 10:40 AM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.1.5
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `package`;
 CREATE TABLE `package` (
-  `idpacket` int(11) NOT NULL,
+  `idpackage` int(11) NOT NULL,
   `name` text NOT NULL,
   `description` text NOT NULL,
   `visible` tinyint(1) NOT NULL
@@ -40,7 +40,7 @@ CREATE TABLE `package` (
 -- Dumping data for table `package`
 --
 
-INSERT INTO `package` (`idpacket`, `name`, `description`, `visible`) VALUES
+INSERT INTO `package` (`idpackage`, `name`, `description`, `visible`) VALUES
 (1, 'basis pakket', '4 GB opslag\r\n1 domein\r\n\r\n\r\n\r\n\r\n\r\n€6,50 per jaar', 1),
 (2, 'site builder basic', '6 GB opslag\r\n4 domeinen\r\n\r\n\r\n\r\n\r\n\r\n€10,- per jaar', 0),
 (3, 'pro pakket', '16 GB opslag\r\n12 domeinen\r\n\r\n\r\n\r\n\r\n\r\n€28,- per jaar', 0),
@@ -54,7 +54,7 @@ INSERT INTO `package` (`idpacket`, `name`, `description`, `visible`) VALUES
 -- Indexes for table `package`
 --
 ALTER TABLE `package`
-  ADD PRIMARY KEY (`idpacket`);
+  ADD PRIMARY KEY (`idpackage`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -64,7 +64,7 @@ ALTER TABLE `package`
 -- AUTO_INCREMENT for table `package`
 --
 ALTER TABLE `package`
-  MODIFY `idpacket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
+  MODIFY `idpackage` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

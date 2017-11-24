@@ -19,8 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $admin = $_POST["admin"]; 
     $mysqli = new mysqli("localhost", "root", "root", "krashosting");
     $sql = "INSERT INTO login (email, wachtwoord, admin, attempt, loggedin)
-    VALUES ($email, $wachtwoord, $admin, 0, 0);";
-    $mysqli->set_charset ($sql );
+    VALUES ('$email', '$wachtwoord', '$admin', 0, 0);";
+    
+    $mysqli->real_escape_string($sql);
     $query = $mysqli->query($sql);   
     var_dump($sql);
 }else{

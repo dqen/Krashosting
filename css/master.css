@@ -46,8 +46,8 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
-.banner{
+/*endcssreset*/
+    .banner{
     background-image: url("../images/banner1.png");
     background-color: silver;
     background-size: cover;
@@ -72,8 +72,8 @@ li a {
     /*padding: 14px 16px;*/
     text-decoration: none;
     width: 23vw;
-    height: 30px;
-    line-height: 30px;
+    height: 50px;
+    line-height: 50px;
 }
 li a:hover {
     background-color: #111;
@@ -81,11 +81,11 @@ li a:hover {
 .menu{
     width: 100vw;
     background-color: #333;
-    height: 30px;
+    height: 50px;
 }
 .active {
     background-color: #4CAF50;
-    height: 30px;
+    height: 50px;
 }
 .container{
     width: 80%;
@@ -157,4 +157,105 @@ li a:hover {
 body{
     background-color: ghostwhite;
     /*test*/
+}
+
+
+a {
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+/*a:hover {*/
+    /*color: red;*/
+/*}*/
+
+#flexcontainer {
+    display: flex;
+    padding: 5px;
+}
+
+.newsdiv {
+    height: 400px;
+    width: 250px;
+    background-color: lightgray;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.newsdiv a {
+
+}
+
+.newsdiv h4 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    top: 100px;
+    color: white;
+    width: 250px;
+    padding-left: 5px;
+    height: 50px;
+}
+
+.newsdiv .imgdiv {
+    height: 150px;
+    background-image: url("http://i.dailymail.co.uk/i/pix/2012/10/17/article-0-158CAE40000005DC-837_964x641.jpg");
+    background-size: cover;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 2px 1.5px rgba(0,0,0,0.75);
+}
+
+.newsdiv .newscontainer {
+    padding: 5px;
+    height: 200px;
+}
+
+.newsdiv .readmore {
+    margin-left: 5px;
+}
+/*teeeessssttt*/
+*{
+    padding : 0;
+    margin : 0;
+    border : 0;
+}
+.blended_grid{
+    display : block;
+    width : 1000px;
+    overflow : auto;
+    margin : 100px auto 0 auto;
+}
+.pageColumnLeft{
+    background-color : rgba(0, 0, 0, 0.5);
+    float : left;
+    clear : none;
+    height : 600px;
+    width : 300px;
+    margin: 15px;
+}
+.pageColumnMid{
+    background-color : rgba(0, 0, 0, 0.5);
+    float : left;
+    clear : none;
+    height : 600px;
+    width : 300px;
+    margin : 15px;
+}
+.pageColumnRight{
+    background-color : rgba(0, 0, 0, 0.5);
+    float : left;
+    clear : none;
+    height : 600px;
+    width : 300px;
+    margin : 15px;
+}
+
+.pageFooter{
+    background-color : rgba(0, 0, 0, 0.5);
+    float : left;
+    clear : none;
+    height : 100px;
+    width : 1000px;
 }

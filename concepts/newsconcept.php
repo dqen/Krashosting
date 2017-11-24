@@ -94,7 +94,7 @@ $articles = new News();
             }
 
             .newsdiv {
-                height: 400px;
+                height: 300px;
                 width: 250px;
                 background-color: lightgray;
                 margin-right: 5px;
@@ -113,13 +113,15 @@ $articles = new News();
                 position: relative;
                 top: 100px;
                 color: white;
+                /*500*/
                 width: 250px;
                 padding-left: 5px;
                 height: 50px;
             }
 
             .newsdiv .imgdiv {
-                height: 150px;
+                /*150*/
+                height: 75px;
                 background-image: url("http://i.dailymail.co.uk/i/pix/2012/10/17/article-0-158CAE40000005DC-837_964x641.jpg");
                 background-size: cover;
                 margin-bottom: 10px;

@@ -2,7 +2,15 @@
     session_start();
     $result= "";
     if($_SESSION["admin"] == 1){
-        $admin .= "";
+        $admin .= "<form action=\"../databases/adduser.php\" method=\"POST\">
+        <label for=\"adduser\">add user</label>
+        <input id=\"adduser\" type=\"text\" name=\"username\" placeholder= \"username\">
+        <select name=\"admin\">
+            <option value= 1 >admin</option>
+            <option value= 2 >werknemer</option>
+        </select>
+        <input type=\"submit\" placeholder=\"verzenden\">
+        </form>";
     }
     $gebruiker = $_SESSION["gebruiker"];
     $gebruiker .= "<br>";
@@ -45,19 +53,33 @@
     </style>
 </head>
     <body>
-        <?php
-           echo $gebruiker
+        <?php   
+            echo $gebruiker;
+            echo $admin;
         ?>
 
-        <form action="../databases/adduser.php" method="POST">
-        <label for="adduser">add user</label>
-        <input id="adduser" type="text" name="username" placeholder= "username">
-        <select name="admin">
+
+        <select name="package_1">
             <option value= 1 >admin</option>
             <option value= 2 >werknemer</option>
         </select>
-        <input type="submit" placeholder="verzenden">
-        </form>
+        <select name="package_2">
+            <option value= 1 >admin</option>
+            <option value= 2 >werknemer</option>
+        </select>
+        <select name="package_3">
+            <option value= 1 >admin</option>
+            <option value= 2 >werknemer</option>
+        </select>
+        <select name="package_4">
+            <option value= 1 >admin</option>
+            <option value= 2 >werknemer</option>
+        </select>
+
+
+
+
+
 
         <label for="open_ww">verander je wachtwoord</label>
         <p style="color:red;"><?php echo $result?></p>

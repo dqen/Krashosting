@@ -10,21 +10,23 @@ $conn = new mysqli($servername, $username, $password, $db);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
+//echo "Connected successfully";
 
-
-$sql = "SELECT name, description FROM packages";
+$row  =[];
+$return = [];
+$sql = 'SELECT name,description FROM package';
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo  $row["name"]. "<br>" . $row["description"]. "<br>";
-    }
-} else{
-    echo "jammer joh";
+//        $return .=  $row["name"]. "<br>" . $row["description"]. "<br>";
+        echo "<pre>";
+        var_dump($row);
+        echo "</pre>";
     }
 
+   var_dump($return);
+    //return echo
 $conn->close();
 ?>
 <!DOCTYPE html>
@@ -46,7 +48,7 @@ $conn->close();
             <li class="active"><a href="pakketen.html">paketten</a></li>
         </ul>
 
-        <div id="pakket1"><?php  ?></div>
+        <div id="pakket1"><?php  $row["name"]?></div>
         <div id="pakket2"></div>
         <div id="pakket3"></div>
         <div id="pakket4"></div>

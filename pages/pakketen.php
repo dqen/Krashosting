@@ -1,33 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$db = "krashosting";
-
-
-$conn = new mysqli($servername, $username, $password, $db);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-//echo "Connected successfully";
-
-$row  =[];
-$return = [];
-$sql = 'SELECT name,description FROM package';
-$result = $conn->query($sql);
-
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-//        $return .=  $row["name"]. "<br>" . $row["description"]. "<br>";
-        echo "<pre>";
-        var_dump($row);
-        echo "</pre>";
+    $mysqli = new mysqli("localhost", "root", "root", "krashosting");
+    $sql = "SELECT name, description FROM package";
+    $query = $mysqli->query($sql);
+    $result = array() ;
+    $i = 0;
+    while($r= $query->fetch_assoc()){
+        $return["$i"] = "{$r["name"]} , {$r["description"]}";
+        $i++;
     }
-
-   var_dump($return);
-    //return echo
-$conn->close();
+    echo "<pre>";
+    var_dump("{$return["0"]}");
+    echo "</pre>";
+    
 ?>
 <!DOCTYPE html>
 <html lang="nl">

@@ -6,7 +6,10 @@
  * Time: 11:21
  */
 
-require_once("../databases/newsdatabase/connect_newsdatabase.php");
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require_once("../databases/connect_newsdatabase.php");
 
 $articles = new News();
 

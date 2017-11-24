@@ -80,6 +80,22 @@ class News {
         }
 
     }
+
+    public function delete_newsitem($id) {
+
+        if ($this->database->query("DELETE FROM nieuwsitems WHERE idnieuws = '$id';")) {
+            return "News item $id has been deleted.";
+        } else {
+            return "Id is required.";
+        }
+
+    }
+
+    public function get_recent() {
+
+//        if ($this->database->query(""))
+
+    }
 }
 
 /** TL;DR:
@@ -102,12 +118,21 @@ class News {
  *  You can also update an article using the "update_newsitem(param, param, param)". It requires 3 parameters.
  *  If you do not want to update, for example, a header, then you have to leave the field empty. ID is required. ex:
  *
- *      $article->update_newsitem([id] 1, [header/title] "", [article]"updated article")
+ *      $newsobj->update_newsitem([id] 1, [header/title] "", [article]"updated article")
  *
  *  The parameters are as follows:
  *
  *  "id"            : STRING / INT  - This declares what article you want to edit.
  *  "title"         : STRING        - The new or updated title for the article.
  *  "article"       : STRING        - The new or updated article.
+ *
+ *  Deleting news items is also possible now. "delete_newsitem(@param)". It only requires the ID of the item you want
+ *  to delete. IT DOES NOT UPDATE THE AUTO INCREMENT YET, SO THE ID WILL STILL GO BEYOND THE ONE YOU DELETED, 4 WILL
+ *  NOT BECOME 3. If you deleted the most recent news item (let's say it's ID is 4)  and you create a new one. The new
+ *  one's ID will still become 5, not 4. Keep that in mind.
+ *
+ *  Here's an example:
+ *
+ *      $newsobj->delete_newsitem(@param)
  *
  */

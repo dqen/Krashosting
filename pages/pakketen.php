@@ -1,17 +1,17 @@
 <?php
     $mysqli = new mysqli("localhost", "root", "root", "krashosting");
-    $sql = "SELECT name, description FROM package";
+    $sql = "SELECT name, description, price FROM package";
     $query = $mysqli->query($sql);
     $result = array() ;
     $i = 0;
     while($r= $query->fetch_assoc()){
-        $return["$i"] = "{$r["name"]} , {$r["description"]}";
+        $return["$i"] = "{$r["name"]} <br> {$r["description"]} <br> <br> <br> <div> <br> </div> {$r["price"]}";
         $i++;
     }
-    echo "<pre>";
-    var_dump("{$return["0"]}");
-    echo "</pre>";
-    
+//    echo "<pre>";
+//    var_dump("{$return["0"]}");
+//    echo "</pre>";
+//
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -32,10 +32,10 @@
             <li class="active"><a href="pakketen.html">paketten</a></li>
         </ul>
 
-        <div id="pakket1"><?php  $row["name"]?></div>
-        <div id="pakket2"></div>
-        <div id="pakket3"></div>
-        <div id="pakket4"></div>
+        <div id="pakket1"><?php echo $return["0"]; ?></div>
+        <div id="pakket2"><?php echo $return["1"]; ?></div>
+        <div id="pakket3"><?php echo $return["2"]; ?></div>
+        <div id="pakket4"><?php echo $return["3"]; ?></div>
     </div>
 </body>
 </html>

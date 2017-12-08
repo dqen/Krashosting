@@ -30,6 +30,7 @@
         <div class="blended_grid">
             <div class="pageColumnLeft">
                 <h2>Pakket 1</h2>
+                <button class="PayPal"></button>
             </div>
             <div class="pageColumnMid">
                 <h2>Pakket 2</h2>

@@ -23,10 +23,10 @@
         <div class="banner">
         </div>
     <ul class="menu">
-        <li class= "menuitem "id="active"><a href="/index.php">Home</a></li>
+        <li class= "menuitem "id="active"><a href="index.php">Home</a></li>
         <li class="menuitem"><a href="pages/contact.html">Contact</a></li>
         <li class="menuitem"><a href="pages/over_ons.html">over ons</a></li>
-        <li class="menuitem"><a href="pages/pakketen.php">paketten</a></li>2
+        <li class="menuitem"><a href="pages/pakketen.php">paketten</a></li>
     </ul>
 <!--        <div class="blended_grid">-->
 <!--            <div class="pageColumnLeft">-->
@@ -34,8 +34,7 @@
 <!--            </div>-->
 <!--            <div class="pageColumnMid">-->
 <!--                <h2>Pakket 2</h2>-->
-<!--            </div>-->
-<!--            <div class="pageColumnRight">-->
+<!--            </div>             <div class="pageColumnRight">-->
 <!--                <h2>Pakket 3</h2>-->
 <!--            </div>-->
 <!--            <div class="pageFooter">-->
@@ -143,7 +142,7 @@
             </div>
             <a href="#" class="readmore">READ MORE...</a>
         </div>
-c
+
     </div>
 </div>
 </body>

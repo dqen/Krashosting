@@ -6,31 +6,27 @@
     height: 300px;
     background-color: red;
     border: solid black 2px;
-}
-.foto_overons1{
-    width: 400px;
-    height: 300px;
-    background-color: red;
-    border: solid black 2px;
-    display: inline-flex;
-    flex-direction: row;
+    /*display: inline-flex;*/
+    /*flex-direction: row;*/
+    float: left;
 }
 .foto_overons2{
     width: 400px;
     height: 300px;
     background-color: red;
     border: solid black 2px;
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /*display: inline-flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    float: left;
 }
 #text_overons{
     width: 40vw;
     height: 604px;
-    display: inline-flex;
+    /*display: inline-flex;*/
     flex-direction: row;
     flex-wrap: wrap;
     background-color: azure;
     border: solid black 2px;
-    position: relative;
+    /*position: relative;*/
 }

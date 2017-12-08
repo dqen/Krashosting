@@ -5,8 +5,15 @@
     $result = array() ;
     $i = 0;
     while($r= $query->fetch_assoc()){
-        $return["$i"] = "{$r["name"]} <br> {$r["description"]} <br> <br> <br> <div> <br> </div> {$r["price"]}";
-        $i++;
+        if ($r['idpackage'] < 2){
+            $return["$i"] = "{$r["name"]} <br> <br> {$r["description"]} <br> <br> <br> <div> <br> </div><div>&euro;  {$r["price"]} </div> ";
+            $i++;
+        }
+        else{
+            $return["$i"] = "{$r["name"]} <br> <br> {$r["description"]} <br> <br> <br> <div> <br> {$r["price"]} </div>";
+            $i++;
+        }
+
     }
 //    echo "<pre>";
 //    var_dump("{$return["0"]}");

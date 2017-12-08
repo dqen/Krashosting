@@ -61,6 +61,10 @@
                         <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
                     </li>
                 </ul>
+        <div class="blended_grid">
+            <div class="pageColumnLeft">
+                <h2>Pakket 1</h2>
+                <button class="PayPal"></button>
             </div>
 
             <div class="w3-third w3-margin-bottom">

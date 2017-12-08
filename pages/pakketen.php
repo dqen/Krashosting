@@ -39,10 +39,11 @@
             <li class="active"><a href="pakketen.html">paketten</a></li>
         </ul>
 
-        <div id="pakket1"><?php echo $return["0"]; ?></div>
+        <div id="pakket1"><?php echo $return["0"]; ?><button class="PayPal"></button></div>
         <div id="pakket2"><?php echo $return["1"]; ?></div>
         <div id="pakket3"><?php echo $return["2"]; ?></div>
         <div id="pakket4"><?php echo $return["3"]; ?></div>
     </div>
+    <script src="/js/betalen.js"></script>
 </body>
 </html>

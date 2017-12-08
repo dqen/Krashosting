@@ -1,31 +1,24 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$db = "krashosting";
+    $mysqli = new mysqli("localhost", "root", "root", "krashosting");
+    $sql = "SELECT name, description, price FROM package";
+    $query = $mysqli->query($sql);
+    $result = array() ;
+    $i = 0;
+    while($r= $query->fetch_assoc()){
+        if ($r['idpackage'] < 2){
+            $return["$i"] = "{$r["name"]} <br> <br> {$r["description"]} <br> <br> <br> <div> <br> </div><div>&euro;  {$r["price"]} </div> ";
+            $i++;
+        }
+        else{
+            $return["$i"] = "{$r["name"]} <br> <br> {$r["description"]} <br> <br> <br> <div> <br> {$r["price"]} </div>";
+            $i++;
+        }
 
-
-$conn = new mysqli($servername, $username, $password, $db);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
-
-
-$sql = "SELECT name, description FROM packages";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo  $row["name"]. "<br>" . $row["description"]. "<br>";
     }
-} else{
-    echo "jammer joh";
-    }
-
-$conn->close();
+//    echo "<pre>";
+//    var_dump("{$return["0"]}");
+//    echo "</pre>";
+//
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -46,10 +39,10 @@ $conn->close();
             <li class="active"><a href="pakketen.html">paketten</a></li>
         </ul>
 
-        <div id="pakket1"><?php  ?></div>
-        <div id="pakket2"></div>
-        <div id="pakket3"></div>
-        <div id="pakket4"></div>
+        <div id="pakket1"><?php echo $return["0"]; ?></div>
+        <div id="pakket2"><?php echo $return["1"]; ?></div>
+        <div id="pakket3"><?php echo $return["2"]; ?></div>
+        <div id="pakket4"><?php echo $return["3"]; ?></div>
     </div>
 </body>
 </html>

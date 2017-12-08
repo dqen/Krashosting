@@ -1,0 +1,13 @@
+#open_ww{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+#close_ww{
+    width: auto;
+    height: 20px;
+    
+}
+#change_ww{
+    display: none;
+}

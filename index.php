@@ -19,24 +19,72 @@
 </head>
 <body>
 
-    <div class="banner">
-    </div>
+        <div class="banner">
+        </div>
     <ul class="menu">
         <li class="active"><a href="/index.php">Home</a></li>
         <li class="menuitem"><a href="pages/contact.html">Contact</a></li>
         <li class="menuitem"><a href="pages/over_ons.html">over ons</a></li>
         <li class="menuitem"><a href="pages/pakketen.php">paketten</a></li>
     </ul>
-    <div class="container">
-            <div id="pakket1"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tortor in sem condimentum convallis nec congue ante. Donec orci velit, faucibus quis venenatis ut, pretium ac sapien. Phasellus eu turpis nunc. Phasellus dignissim tortor sit amet lorem gravida, eget tristique turpis condimentum. In hac habitasse platea dictumst. Morbi pharetra lectus et pellentesque imperdiet. Phasellus velit nibh, dictum non nisi et, rhoncus semper lectus. Nulla ultrices mollis enim at scelerisque. Nam consequat blandit eros ac lobortis. Sed vestibulum diam eget mauris finibus dignissim. Integer ex ligula, tempor ac ornare quis, pretium ut purus</p></div>
-            <div id="pakket2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tortor in sem condimentum convallis nec congue ante. Donec orci velit, faucibus quis venenatis ut, pretium ac sapien. Phasellus eu turpis nunc. Phasellus dignissim tortor sit amet lorem gravida, eget tristique turpis condimentum. In hac habitasse platea dictumst. Morbi pharetra lectus et pellentesque imperdiet. Phasellus velit nibh, dictum non nisi et, rhoncus semper lectus. Nulla ultrices mollis enim at scelerisque. Nam consequat blandit eros ac lobortis. Sed vestibulum diam eget mauris finibus dignissim. Integer ex ligula, tempor ac ornare quis, pretium ut purus.</p></div>
-            <div id="pakket3"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tortor in sem condimentum convallis nec congue ante. Donec orci velit, faucibus quis venenatis ut, pretium ac sapien. Phasellus eu turpis nunc. Phasellus dignissim tortor sit amet lorem gravida, eget tristique turpis condimentum. In hac habitasse platea dictumst. Morbi pharetra lectus et pellentesque imperdiet. Phasellus velit nibh, dictum non nisi et, rhoncus semper lectus. Nulla ultrices mollis enim at scelerisque. Nam consequat blandit eros ac lobortis. Sed vestibulum diam eget mauris finibus dignissim. Integer ex ligula, tempor ac ornare quis, pretium ut purus.</p></div>
-<!--            <div id="pakket4"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et tortor in sem condimentum convallis nec congue ante. Donec orci velit, faucibus quis venenatis ut, pretium ac sapien. Phasellus eu turpis nunc. Phasellus dignissim tortor sit amet lorem gravida, eget tristique turpis condimentum. In hac habitasse platea dictumst. Morbi pharetra lectus et pellentesque imperdiet. Phasellus velit nibh, dictum non nisi et, rhoncus semper lectus. Nulla ultrices mollis enim at scelerisque. Nam consequat blandit eros ac lobortis. Sed vestibulum diam eget mauris finibus dignissim. Integer ex ligula, tempor ac ornare quis, pretium ut purus.</p></div>-->
-            <div id="break"></div>
+        <div class="blended_grid">
+            <div class="pageColumnLeft">
+                <h2>Pakket 1</h2>
+            </div>
+            <div class="pageColumnMid">
+                <h2>Pakket 2</h2>
+            </div>
+            <div class="pageColumnRight">
+                <h2>Pakket 3</h2>
+            </div>
+            <div class="pageFooter">
+                <h2>Custom Pakket</h2>
+            </div>
+        </div>
+    <div id="flexcontainer">
+        <div class="newsdiv">
+            <div class="imgdiv" id="img1">
+                <!--                <h4>--><?php //echo $articles->get_item(1, "header"); ?><!--</h4>-->
+            </div>
+            <div class="newscontainer">
+                <p>
+                    <!--                    --><?php //echo $articles->get_item(1, "articlesnippet"); ?>
+                </p>
+            </div>
+            <a href="#" class="readmore">READ MORE...</a>
+        </div>
 
-            <div id="nieuws1"><h3><?php echo $article->get_item(1, "header"); ?></h3> <p><?php echo $article->get_item(1, "articlesnippet"); ?></p></div>
-            <div id="nieuws2"><h3><?php echo $article->get_item(2, "header"); ?></h3> <p><?php echo $article->get_item(2, "articlesnippet"); ?></p></div>
-            <div id="nieuws3"><h3><?php echo $article->get_item(3, "header"); ?></h3> <p><?php echo $article->get_item(3, "articlesnippet"); ?></p></div>
+        <!-- News Item 2 -->
+
+        <div class="newsdiv">
+            <div class="imgdiv" id="img1">
+                <!--                <h4>--><?php //echo $articles->get_item(2, "header"); ?><!--</h4>-->
+            </div>
+            <div class="newscontainer">
+                <p>
+                    <!--                    --><?php //echo $articles->get_item(2, "articlesnippet"); ?>
+                </p>
+            </div>
+            <a href="#" class="readmore">READ MORE...</a>
+        </div>
+
+        <!-- News Item 3 -->
+
+        <div class="newsdiv">
+            <div class="imgdiv" id="img1">
+                <!--                <h4>--><?php //echo $articles->get_item(3, "header"); ?><!--</h4>-->
+            </div>
+            <div class="newscontainer">
+                <p>
+                    <!--                    --><?php //echo $articles->get_item(3, "articlesnippet"); ?>
+                </p>
+            </div>
+            <a href="#" class="readmore">READ MORE...</a>
+        </div>
+
     </div>
+</div>
 </body>
+
+
 </html>

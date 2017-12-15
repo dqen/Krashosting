@@ -28,6 +28,19 @@
         <li class="menuitem"><a href="pages/over_ons.html">over ons</a></li>
         <li class="menuitem"><a href="pages/pakketen.php">paketten</a></li>
     </ul>
+<!--        <div class="blended_grid">-->
+<!--            <div class="pageColumnLeft">-->
+<!--                <h2>Pakket 1</h2>-->
+<!--            </div>-->
+<!--            <div class="pageColumnMid">-->
+<!--                <h2>Pakket 2</h2>-->
+<!--            </div>             <div class="pageColumnRight">-->
+<!--                <h2>Pakket 3</h2>-->
+<!--            </div>-->
+<!--            <div class="pageFooter">-->
+<!--                <h2>Custom Pakket</h2>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
             <h2>PRICING</h2>
             <p>Choose a pricing plan that fits your needs.</p><br>
@@ -48,6 +61,10 @@
                         <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
                     </li>
                 </ul>
+        <div class="blended_grid">
+            <div class="pageColumnLeft">
+                <h2>Pakket 1</h2>
+                <button class="PayPal"></button>
             </div>
 
             <div class="w3-third w3-margin-bottom">
@@ -88,10 +105,7 @@
                 </ul>
             </div>
         </div>
-<!--            <div class="pageColumnLeft">-->
-<!--                <h2>Pakket 1</h2>-->
-<!--                <button class="PayPal"></button>-->
-<!--            </div>-->
+
         <div id="flexcontainer">
         <div class="newsdiv">
             <div class="imgdiv" id="img1">

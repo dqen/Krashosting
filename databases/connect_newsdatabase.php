@@ -93,8 +93,26 @@ class News {
 
     public function get_recent() {
 
-//        if ($this->database->query(""))
+        if ($result = $this->database->query("SELECT * FROM nieuwsitems;")) {
 
+            $rowcount = $result->num_rows;
+
+            $resultarr = array();
+
+            for($i = $rowcount; $i < ($rowcount - 3); $i--) {
+
+                if ($row = $this->database->query("SELECT * FROM nieuwsitems WHERE idnieuws = '$i'")) {
+                    $rowarr = $row->fetch_row();
+
+                    return $rowarr;
+                } else {
+                    return "Error fetching row.";
+                }
+
+            }
+        } else {
+            return "An unexpected error occurred. Please contact an administrator.";
+        }
     }
 }
 

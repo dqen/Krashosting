@@ -1,9 +1,15 @@
-4function PayPal() {
+document.addEventListener("DOMContentLoaded", mystart);
+
+function mystart() {
+
+    document.addEventListener("click",function PayPal() {
+        document.getElementById("paypal");
         let txt;
-        if (confirm("Press a button!") == true) {
-            txt = "You pressed OK!";
+        if (confirm("Press a button!") === true) {
+            txt = "betaling afronden";
         } else {
-            txt = "You pressed Cancel!";
+            txt = "betaling afbreken";
         }
         document.getElementsByClassName("PayPal").innerHTML = txt;
-    }
+    } )
+}

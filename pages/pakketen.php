@@ -40,7 +40,7 @@
         </ul>
 
         <div id="pakket1"><?php echo $return["0"]; ?>
-            <button class="PayPal" type="button">polio</button></div>
+            <button type="submit">Click Me!</button></div>
         <div id="pakket2"><?php echo $return["1"]; ?></div>
         <div id="pakket3"><?php echo $return["2"]; ?></div>
         <div id="pakket4"><?php echo $return["3"]; ?></div>

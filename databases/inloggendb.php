@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("location:../pages/profiel_pagina.php");
     exit();
     }else{
-        $attempts = $r["attempt"];
+        $attempts = $r["attempt"]; 
         $attempts++;
         
         $_SESSION["fout"] = "wachtwoord of gebruikersnaam is fout";
@@ -32,8 +32,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query = $mysqli1->query($sql1);
         header("location:../pages/krashosting.php");
         exit();
-}
-}else{
-header("location:../pages/krashosting.php");
-}
-?>
+} 

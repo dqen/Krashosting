@@ -16,7 +16,7 @@
     $gebruiker .= "<br>";
     
     $listparticulier = "";
-    $listparticulier .= "<table style=\"width:100%\">
+    $listparticulier .= "<table style=\"width:50%\">
                 <tr>
                     <th>idguest</th>
                     <th>naam</th>
@@ -24,14 +24,22 @@
                     <th>adress</th>
                     <th>geslacht</th>
                     <th>leeftijd</th>
-                    <th>betalingsgegevens</th>
-                    <th>verwijderen/bewerken</th>
-                </tr>";
+                    <th>betalingsgegevens</th>";
+                    if($_SESSION["admin"] == 1){
+                        $listparticulier .= "<th>verwijderen</th>";
+                        $listparticulier .= "<th>bewerken</th>";
+                    }else{
+                        $listparticulier .= "<th>bewerken</th>";
+                    }
+                    $listparticulier .= "</tr>";
+                    
+                
                 $count = 0;
     $mysqli = new mysqli("localhost", "root", "root", "krashosting");
     $sql = "SELECT * FROM particulier";
     $query = $mysqli->query($sql);
     while($r= $query->fetch_assoc()){
+        $idnaam = $r["idparticulier"];
                 $listparticulier .= "<tr>
                         <td>{$r["idparticulier"]}</td>
                         <td>{$r["naam"]}</td>
@@ -39,8 +47,13 @@
                         <td>{$r["adress"]}</td>
                         <td>{$r["geslacht"]}</td>
                         <td>{$r["leeftijd"]}</td>
-                        <td>{$r["betalingsgegevens"]}</td>
-                        <td><input type=\"submit\"></td>
+                        <td>{$r["betalingsgegevens"]}</td>"; 
+                        if($_SESSION["admin"] == 1){
+                            $listparticulier .="<td><form action=\"../databases/bewerken_database\"><input type=\"submit\" value=\"$idnaam\"></form></td>";                      
+                            $listparticulier .= "<td><form action=\"../databases/verwijderen_database\"><input type=\"submit\" value=\"$idnaam\"></form></td>";
+                        }else        
+                
+                        $listparticulier .="<td><form action=\"../databases/bewerken_database\"><input type=\"submit\" value=\"$idnaam\"></form></td>
                      </tr>";
                    
                     $count++;
@@ -109,7 +122,7 @@
                 </form>
             </div>
         </div>
-        <div class="border1">
+        <div class="">
             <?php
             for($i - 0; $i < count("$count");$i++){
                 echo $listparticulier;

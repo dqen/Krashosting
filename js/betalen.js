@@ -1,4 +1,4 @@
-function PayPal() {
+4function PayPal() {
         let txt;
         if (confirm("Press a button!") == true) {
             txt = "You pressed OK!";

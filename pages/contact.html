@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/master.css" type="text/css">
-    <link rel="stylesheet" href="../css/contact.css" type="text/css">
+    <link rel="stylesheet" href="../css/contact2.0.css" type="text/css">
     <title>contact</title>
 </head>
 <body>
@@ -15,35 +15,20 @@
     <li class="menuitem"><a href="over_ons.html">over ons</a></li>
     <li class="menuitem"><a href="pakketen.html">paketten</a></li>
 </ul>
-<div class="container_contact">
-    <div class="tekst_contact"><p>
-        email: contact@krashosting.nl<br>
-        tel:   013 539 7070 <br>
-        adres: Kasteeldreef 122, 5046 CV Tilburg
-    </p></div>
-    <div id="map" class="links" style="width:600px;height:400px"></div>
-        <div id="form-div">
-            <form class="form" id="form1">
-
-                <p class="name">
-                    <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
-                </p>
-
-                <p class="email">
-                    <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
-                </p>
-
-                <p class="text">
-                    <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
-                </p>
-
-
-                <div class="submit">
-                    <input type="submit" value="SEND" id="button-blue"/>
-                    <div class="ease"></div>
-                </div>
-            </form>
-</div>
+<div id="contact-container">
+    <div id="contact">
+        <div>
+            <div id="title"><span>Contact Us</span></div>
+            <h3 id="adres">Address</h3>
+            <div id="grootte">
+                <p>Call us for any questions.</p>
+                <p><i></i>  Kasteeldreef 122, Tilburg</p>
+                <p><i></i>  +00 1515151515</p>
+                <p><i></i>  test@test.com</p>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
 </div>
 <script>
     function myMap() {
@@ -56,5 +41,46 @@
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCev8FTXWfDsFrCa6K5QM_ihQDIHXgz8Eo&callback=myMap"></script>
+<!--<div class="container_contact">-->
+    <!--<div class="tekst_contact"><p>-->
+        <!--email: contact@krashosting.nl<br>-->
+        <!--tel:   013 539 7070 <br>-->
+        <!--adres: Kasteeldreef 122, 5046 CV Tilburg-->
+    <!--</p></div>-->
+    <!--<div id="map" class="links" style="width:600px;height:400px"></div>-->
+        <!--<div id="form-div">-->
+            <!--<form class="form" id="form1">-->
+
+                <!--<p class="name">-->
+                    <!--<input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />-->
+                <!--</p>-->
+
+                <!--<p class="email">-->
+                    <!--<input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />-->
+                <!--</p>-->
+
+                <!--<p class="text">-->
+                    <!--<textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>-->
+                <!--</p>-->
+
+
+                <!--<div class="submit">-->
+                    <!--<input type="submit" value="SEND" id="button-blue"/>-->
+                    <!--<div class="ease"></div>-->
+                <!--</div>-->
+            <!--</form>-->
+<!--</div>-->
+<!--</div>-->
+<!--<script>-->
+    <!--function myMap() {-->
+        <!--var mapOptions = {-->
+            <!--center: new google.maps.LatLng(51.572785, 5.0791122),-->
+            <!--zoom: 10,-->
+            <!--mapTypeId: google.maps.MapTypeId.HYBRID-->
+        <!--}-->
+        <!--var map = new google.maps.Map(document.getElementById("map"), mapOptions);-->
+    <!--}-->
+<!--</script>-->
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCev8FTXWfDsFrCa6K5QM_ihQDIHXgz8Eo&callback=myMap"></script>-->
 </body>
 </html>

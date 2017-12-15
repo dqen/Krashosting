@@ -93,8 +93,17 @@ class News {
 
     public function get_recent() {
 
-//        if ($this->database->query(""))
+        if ($result = $this->database->query("SELECT * FROM nieuwsitems;")) {
 
+            $rowcount = $result->num_rows;
+
+            while($x = 3) {
+
+            }
+
+        } else {
+            return "An unexpected error occurred. Please contact an administrator.";
+        }
     }
 }
 

@@ -185,4 +185,5 @@ $articles = new News();
 
         </div>
     </body>
+    <?php echo $articles->get_recent(); ?>
 </html>

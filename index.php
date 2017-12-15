@@ -16,6 +16,8 @@
     <title>home</title>
     <link rel="stylesheet" href="css/master.css" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -23,7 +25,7 @@
         <div class="banner">
         </div>
     <ul class="menu">
-        <li class= "menuitem " id="active"><a href="index.php">Home</a></li>
+        <li class= "menuitem "id="active"><a href="index.php">Home</a></li>
         <li class="menuitem"><a href="pages/contact.html">Contact</a></li>
         <li class="menuitem"><a href="pages/over_ons.html">over ons</a></li>
         <li class="menuitem"><a href="pages/pakketen.php">paketten</a></li>
@@ -41,6 +43,7 @@
 <!--                <h2>Custom Pakket</h2>-->
 <!--            </div>-->
 <!--        </div>-->
+        <!-- Pricing Row -->
         <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
             <h2>PRICING</h2>
             <p>Choose a pricing plan that fits your needs.</p><br>
@@ -61,10 +64,6 @@
                         <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
                     </li>
                 </ul>
-        <div class="blended_grid">
-            <div class="pageColumnLeft">
-                <h2>Pakket 1</h2>
-                <button class="PayPal" type="button"></button>
             </div>
 
             <div class="w3-third w3-margin-bottom">
@@ -105,6 +104,7 @@
                 </ul>
             </div>
         </div>
+
 
         <div id="flexcontainer">
         <div class="newsdiv">

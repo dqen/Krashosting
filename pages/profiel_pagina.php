@@ -26,7 +26,7 @@
         <title>login</title>
         <link rel="stylesheet" href="../css/master.css" type="text/css">
         <link rel="stylesheet" href="../css/profiel_pagina.css" type="text/css">
-        <script src="profiel_pagina.js"></script>
+        <script src="../js/profiel_pagina.js"></script>
     </head>
     <body>
         <?php   

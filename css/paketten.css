@@ -26,3 +26,7 @@
     background-color: lightslategray;
     display: inline-block;
 }
+button{
+    position: absolute;
+    z-index: 1;
+}

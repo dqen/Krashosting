@@ -23,7 +23,7 @@
         <div class="banner">
         </div>
     <ul class="menu">
-        <li class= "menuitem "id="active"><a href="index.php">Home</a></li>
+        <li class= "menuitem " id="active"><a href="index.php">Home</a></li>
         <li class="menuitem"><a href="pages/contact.html">Contact</a></li>
         <li class="menuitem"><a href="pages/over_ons.html">over ons</a></li>
         <li class="menuitem"><a href="pages/pakketen.php">paketten</a></li>
@@ -64,7 +64,7 @@
         <div class="blended_grid">
             <div class="pageColumnLeft">
                 <h2>Pakket 1</h2>
-                <button class="PayPal"></button>
+                <button class="PayPal" type="button"></button>
             </div>
 
             <div class="w3-third w3-margin-bottom">

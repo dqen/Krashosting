@@ -71,7 +71,7 @@ ul {
     text-align: center;
     /*padding: 14px 16px;*/
     text-decoration: none;
-    width: 23vw;
+    width: 25vw;
     height: 50px;
     line-height: 50px;
 }
@@ -84,7 +84,7 @@ ul {
     height: 50px;
 }
 #active {
-    background-color: #4CAF50;
+    background-color: #009688;
     height: 50px;
 }
 .container{

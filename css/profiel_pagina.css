@@ -11,3 +11,11 @@
 #change_ww{
     display: none;
 }
+.border1{
+    border: solid black 1px;
+    width: 50vw;
+    display: flex
+}
+td , th{
+    border: solid 1px black;
+}

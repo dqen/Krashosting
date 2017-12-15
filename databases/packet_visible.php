@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql4 = "UPDATE package SET visible = $visible4 WHERE idpacket = 4";
     $mysqli->real_escape_string($sql);
     $query = $mysqli->query($sql);   
-    var_dump($sql);
+    header("location:../pages/profiel_pagina.php");     
 }else{
     header("location:../pages/profiel_pagina.php");
     exit();

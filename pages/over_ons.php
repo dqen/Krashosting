@@ -10,12 +10,12 @@
 <body>
 <div class="banner">
 </div>
-    <ul class="menu">
-        <li class= "menuitem "><a href="index.php">Home</a></li>
-        <li class="menuitem"><a href="pages/contact.html">Contact</a></li>
-        <li class="menuitem" id="active"><a href="pages/over_ons.html">over ons</a></li>
-        <li class="menuitem"><a href="pages/pakketen.php">paketten</a></li>
-    </ul>
+<ul class="menu">
+    <li class= "menuitem "><a href="../index.php">Home</a></li>
+    <li class="menuitem"><a href="contact.php">Contact</a></li>
+    <li class="menuitem" id="active"><a href="over_ons.php">over ons</a></li>
+    <li class="menuitem"><a href="pakketen.php">paketten</a></li>
+</ul>
 
 <div id="overons_container">
 

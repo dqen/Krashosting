@@ -36,14 +36,14 @@
             <li class="menuitem"><a href="/index.php">Home</a></li>
             <li class="menuitem"><a href="contact.html">Contact</a></li>
             <li class="menuitem"><a href="over_ons.html">over ons</a></li>
-            <li class="active"><a href="pakketen.html">paketten</a></li>
+            <li class="active"><a href="pakketen.php">paketten</a></li>
         </ul>
 
-        <div id="pakket1"><?php echo $return["0"]; ?>
-            <button type="submit">Click Me!</button></div>
+        <div id="pakket1"><?php echo $return["0"]; ?></div>
         <div id="pakket2"><?php echo $return["1"]; ?></div>
         <div id="pakket3"><?php echo $return["2"]; ?></div>
         <div id="pakket4"><?php echo $return["3"]; ?></div>
+        <button type="submit" id="paypal">Click Me!</button>
     </div>
     <script src="/js/betalen.js"></script>
 </body>

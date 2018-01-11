@@ -1,0 +1,13 @@
+.text_overons {
+    text-align: center;
+}
+#pakkettetn_container {
+    margin: 30px;
+}
+
+#title {
+    font-weight: bold;
+    font-size: 50px;
+    color: #009688;
+    text-align: center;
+}

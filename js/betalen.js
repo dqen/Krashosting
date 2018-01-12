@@ -5,7 +5,7 @@ function mystart() {
     document.addEventListener("click",function PayPal() {
         document.getElementById("paypal");
         let txt;
-        if (confirm("Press a button!") === true) {
+        if (confirm("klik op oke om te betalen!") === true) {
             txt = "betaling afronden";
         } else {
             txt = "betaling afbreken";

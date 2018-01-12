@@ -39,9 +39,18 @@
             <li class="active"><a href="pakketen.php">paketten</a></li>
         </ul>
 
+<<<<<<< Updated upstream
         <div id="pakket1"><?php echo $return["0"]; ?></div>
         <div id="pakket2"><?php echo $return["1"]; ?></div>
         <div id="pakket3"><?php echo $return["2"]; ?></div>
+=======
+        <div id="pakket1"><?php echo $return["0"]; ?>
+            <button type="submit">betalen</button></div>
+        <div id="pakket2"><?php echo $return["1"]; ?>
+            <button type="submit">betalen</button></div>
+        <div id="pakket3"><?php echo $return["2"]; ?>
+            <button type="submit">betalen</button></div>
+>>>>>>> Stashed changes
         <div id="pakket4"><?php echo $return["3"]; ?></div>
         <button type="submit" id="paypal">Click Me!</button>
     </div>

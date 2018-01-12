@@ -37,8 +37,13 @@
     </style>
 </head>
 <body>
+    <script>
+
+    </script>
     <div>
-        <form autocomplete="on">
+        <form autocomplete="on" id="form1">
+
+            <input name="comporpart" value="0" hidden>
             <label for="name">Name</label>
             <input name="name" id="name" required>
             <label for="lastname">Last Name</label>
@@ -50,8 +55,8 @@
             <label for="adress">Adress & Postal/Zip code</label>
             <input name="adress" id="adress">
             <input name="postcode" id="postcode">
-            <label for="sex" class="sexnage">Sex</label>
-            <select name="sex" id="sex">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
@@ -65,6 +70,18 @@
 
                 ?>
             </select>
+        </form>
+
+        <form autocomplete="on" id="form2">
+            <input name="comporpart" value="1" hidden>
+            <label for="name">Company Name</label>
+            <input name="name" id="name" required>
+            <label for="contactpers">Contact Person</label>
+            <input name="contactpers" id="contactpers" required>
+            <label for="emailcontactpers">Email Contact Person</label>
+            <input name="emailcontactpers" id="emailcontactpers" required>
+            <label for="gendercontactperson">Gender</label>
+            <input name="gendercontactperson">
         </form>
     </div>
 </body>

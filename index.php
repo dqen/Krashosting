@@ -24,10 +24,11 @@
 
         <div class="banner">
         </div>
+
     <ul class="menu">
         <li class= "menuitem "id="active"><a href="index.php">Home</a></li>
-        <li class="menuitem"><a href="pages/contact.html">Contact</a></li>
-        <li class="menuitem"><a href="pages/over_ons.html">over ons</a></li>
+        <li class="menuitem"><a href="pages/contact.php">Contact</a></li>
+        <li class="menuitem"><a href="pages/over_ons.php">over ons</a></li>
         <li class="menuitem"><a href="pages/pakketen.php">paketten</a></li>
     </ul>
 <!--        <div class="blended_grid">-->
@@ -43,7 +44,6 @@
 <!--                <h2>Custom Pakket</h2>-->
 <!--            </div>-->
 <!--        </div>-->
-        <!-- Pricing Row -->
         <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
             <h2>PRICING</h2>
             <p>Choose a pricing plan that fits your needs.</p><br>

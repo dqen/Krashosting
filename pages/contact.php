@@ -13,7 +13,7 @@
     <li class="menuitem"><a href="/index.php">Home</a></li>
     <li class="menuitem" id="active"><a href="contact.php">Contact</a></li>
     <li class="menuitem"><a href="over_ons.php">over ons</a></li>
-    <li class="menuitem"><a href="pakketen.php">paketten</a></li>
+    <li class="menuitem"><a href="pakketen.html">paketten</a></li>
 </ul>
 <div id="contact-container">
     <div id="contact">

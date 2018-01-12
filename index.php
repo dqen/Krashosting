@@ -29,7 +29,7 @@
         <li class= "menuitem "id="active"><a href="index.php">Home</a></li>
         <li class="menuitem"><a href="pages/contact.php">Contact</a></li>
         <li class="menuitem"><a href="pages/over_ons.php">over ons</a></li>
-        <li class="menuitem"><a href="pages/pakketen.php">paketten</a></li>
+        <li class="menuitem"><a href="pages/pakketen.html">paketten</a></li>
     </ul>
 <!--        <div class="blended_grid">-->
 <!--            <div class="pageColumnLeft">-->
@@ -114,6 +114,7 @@
             <div class="newscontainer">
                 <p>
                     <!--                    --><?php //echo $articles->get_item(1, "articlesnippet"); ?>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate magna eget velit consequat tincidunt. Nulla vitae libero lorem.
                 </p>
             </div>
             <a href="#" class="readmore">READ MORE...</a>
@@ -128,6 +129,7 @@
             <div class="newscontainer">
                 <p>
                     <!--                    --><?php //echo $articles->get_item(2, "articlesnippet"); ?>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate magna eget velit consequat tincidunt. Nulla vitae libero lorem.
                 </p>
             </div>
             <a href="#" class="readmore">READ MORE...</a>
@@ -142,6 +144,7 @@
             <div class="newscontainer">
                 <p>
                     <!--                    --><?php //echo $articles->get_item(3, "articlesnippet"); ?>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate magna eget velit consequat tincidunt. Nulla vitae libero lorem.
                 </p>
             </div>
             <a href="#" class="readmore">READ MORE...</a>

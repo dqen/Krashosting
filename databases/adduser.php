@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $mysqli->real_escape_string($sql);
     $query = $mysqli->query($sql);   
-    var_dump($sql);
+    header("location:../pages/profiel_pagina.php");
 }else{
     header("location:../pages/profiel_pagina.php");
     exit();

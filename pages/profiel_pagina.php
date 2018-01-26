@@ -20,6 +20,7 @@
                 <tr>
                     <th>idguest</th>
                     <th>naam</th>
+                    <th>telefoon</th>
                     <th>email</th> 
                     <th>adress</th>
                     <th>geslacht</th>
@@ -43,17 +44,18 @@
                 $listparticulier .= "<tr>
                         <td>{$r["idparticulier"]}</td>
                         <td>{$r["naam"]}</td>
+                        <td>{$r["telefoon"]}</td>
                         <td>{$r["email"]}</td> 
                         <td>{$r["adress"]}</td>
                         <td>{$r["geslacht"]}</td>
                         <td>{$r["leeftijd"]}</td>
                         <td>{$r["betalingsgegevens"]}</td>"; 
                         if($_SESSION["admin"] == 1){
-                            $listparticulier .="<td><form action=\"../databases/bewerken_database\"><input type=\"submit\" value=\"$idnaam\"></form></td>";                      
-                            $listparticulier .= "<td><form action=\"../databases/verwijderen_database\"><input type=\"submit\" value=\"$idnaam\"></form></td>";
+                            $listparticulier .="<td><form method=\"POST\" action=\"../databases/verwijderen_database.php\"><input type=\"submit\" name=\"idnaam\" value=\"$idnaam\"></form></td>";                      
+                            $listparticulier .= "<td><form method=\"POST\" action=\"../databases/bewerken_database.php\"><input type=\"submit\" name=\"idnaam\" value=\"$idnaam\"></form></td>";
                         }else        
                 
-                        $listparticulier .="<td><form action=\"../databases/bewerken_database\"><input type=\"submit\" value=\"$idnaam\"></form></td>
+                        $listparticulier .="<td><form action=\"../databases/bewerken_database.php\"><input type=\"submit\" value=\"$idnaam\"></form></td>
                      </tr>";
                    
                     $count++;

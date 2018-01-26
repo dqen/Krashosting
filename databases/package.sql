@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 24, 2017 at 10:40 AM
+-- Generation Time: Jan 26, 2018 at 10:53 AM
 -- Server version: 5.6.34-log
--- PHP Version: 7.1.5
+-- PHP Version: 7.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,18 +33,19 @@ CREATE TABLE `package` (
   `idpackage` int(11) NOT NULL,
   `name` text NOT NULL,
   `description` text NOT NULL,
-  `visible` tinyint(1) NOT NULL
+  `visible` tinyint(1) NOT NULL,
+  `price` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `package`
 --
 
-INSERT INTO `package` (`idpackage`, `name`, `description`, `visible`) VALUES
-(1, 'basis pakket', '4 GB opslag\r\n1 domein\r\n\r\n\r\n\r\n\r\n\r\n€6,50 per jaar', 1),
-(2, 'site builder basic', '6 GB opslag\r\n4 domeinen\r\n\r\n\r\n\r\n\r\n\r\n€10,- per jaar', 0),
-(3, 'pro pakket', '16 GB opslag\r\n12 domeinen\r\n\r\n\r\n\r\n\r\n\r\n€28,- per jaar', 0),
-(4, 'custom', 'voor een op maat gemaakt pakket kunt i contact met ons opnemen via de contact pagina', 0);
+INSERT INTO `package` (`idpackage`, `name`, `description`, `visible`, `price`) VALUES
+(1, 'basis pakket', '4 GB opslag\r\n1 domein\r\n\r\n\r\n\r\n\r\n\r\n', 1, '24,50 per jaar'),
+(2, 'site builder basic', '6 GB opslag\r\n4 domeinen\r\n\r\n\r\n\r\n\r\n\r\n', 1, '28,50 per jaar'),
+(3, 'pro pakket', '16 GB opslag\r\n12 domeinen\r\n\r\n\r\n\r\n\r\n\r\n', 1, '32,50 per jaar'),
+(4, 'custom', 'voor een op maat gemaakt pakket kunt i contact met ons opnemen via de contact pagina', 1, '');
 
 --
 -- Indexes for dumped tables

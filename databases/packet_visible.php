@@ -8,6 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $admin = $_POST["admin"]; 
     $mysqli = new mysqli("localhost", "root", "root", "krashosting");
     $sql1 = "UPDATE package SET visible = $visible1 WHERE idpacket = 1" ;
+
+//    if()
+
     $sql2 =  "UPDATE package SET visible = $visible2 WHERE idpacket = 2";
     $sql3 = "UPDATE package SET visible = $visible3 WHERE idpacket = 3";
     $sql4 = "UPDATE package SET visible = $visible4 WHERE idpacket = 4";

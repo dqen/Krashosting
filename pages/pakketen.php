@@ -25,11 +25,8 @@
                     </li>
                 </ul>
             </div>";
-            }
-            
-        }
-    $i = 0;
-   
+            } 
+        }  
 ?>
 
 <!DOCTYPE html>
@@ -56,8 +53,8 @@
     </ul>
 
         <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
-            <h2>PRICING</h2>
-            <p>Choose a pricing plan that fits your needs.</p><br>
+            <h2>PAKKETTEN</h2>
+            <p>kies het pakket wat het meest bij je past.</p><br>
             <?php
             echo $result 
             ?>

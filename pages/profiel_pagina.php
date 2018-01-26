@@ -1,13 +1,15 @@
 <?php
+    
     session_start();
     $result= "";
     if($_SESSION["admin"] == 1){
         $admin .= "<form id=\"adduser\" action=\"../databases/adduser.php\" method=\"POST\">
             <label for=\"adduser\">add user</label>
-            <input id=\"adduser\" type=\"text\" name=\"username\" placeholder= \"username\">
+            <input id=\"addusername\" type=\"text\" name=\"username\" placeholder= \"username\">
             <select name=\"admin\">
             <option value= 1 >admin</option>
             <option value= 2 >werknemer</option>
+            <option value = 3 >particulier</option>
             </select>
             <input type=\"submit\" placeholder=\"verzenden\">
             </form>";
@@ -85,6 +87,8 @@
                 echo "</div>";
             ?>
         </div>
+        <br><br>
+        
         <div class="border1">
             <form action="../databases/packet_visible.php" method="POST" >
                 <p>package 1</p>
@@ -92,30 +96,40 @@
                     <option value= 1 >visible</option>
                     <option value= 0 >invisible</option>
                 </select>
+                <input value="1" type="submit" name="package" placeholder="verzenden">
+
+            </form>
+            <form action="../databases/packet_visible.php" method="POST" >
                 <p>package 2</p>
                 <select name="package_2">
                     <option value= 1 >visible</option>
                     <option value= 0 >invisible</option>
                 </select>
+                <input value="2" type="submit" name="package" placeholder="verzenden">
+
+                </form>
+            <form action="../databases/packet_visible.php" method="POST" >
                 <p>package 3</p>
                 <select name="package_3">
                     <option value= 1 >visible</option>
                     <option value= 0 >invisible</option>
                 </select>
+                <input value="3" type="submit" name="package" placeholder="verzenden">
+
+                </form>
+            <form action="../databases/packet_visible.php" method="POST" >
                 <p>package 4</p>
                 <select name="package_4">
                     <option value= 1 >visible</option>
                     <option value= 0 >invisible</option>
                 </select>
-                <input type="submit" placeholder="verzenden">
+                <input value="4" type="submit" name="package" placeholder="verzenden">
             </form>
         </div>
+        <br><br>
+
         <div class="border1">
-            <label for="open_ww">verander je wachtwoord</label>
-            <p style="color:red;"><?php echo $result?></p>
-            <input type="button" id="open_ww" onclick="open_ww()" >
-            <div id="change_ww"> 
-                <input type="button" id="close_ww" onclick="close_ww()">
+            <label for="open_ww">verander je wachtwoord</label><br>
                 <form action="../databases/profiel_db.php" method="POST" class="form" onload="disableAllInputs()">
                     <input type="password" name="oudwachtwoord" placeholder="oud wachtwoord"><br>
                     <input type="password" name="wachtwoord" placeholder="nieuw wachtwoord"><br>
@@ -124,6 +138,7 @@
                 </form>
             </div>
         </div>
+        <br><br>
         <div class="">
             <?php
             for($i - 0; $i < count("$count");$i++){

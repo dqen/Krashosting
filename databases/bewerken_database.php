@@ -28,7 +28,7 @@ var_dump($r);
         <input value="$r[\"adress\"] id="adress" name="adress" type="text">
         <input value="$r[\"geslacht\"]" id="geslacht" name="geslacht" type="text">
         <input value="$r[\"leeftijd\"]" id="leeftijd" name="leeftijd" type="text">
-        <input value="$r[\"betalingsgegevens"]}" id="betalingsgegevens" name="betalingsgegevens" type="text">
+        <input value="$r[\"betalingsgegevens"]" id="betalingsgegevens" name="betalingsgegevens" type="text">
     </body>
 </html>
 

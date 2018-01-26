@@ -1,21 +1,24 @@
 <?php
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $gebruiker = $_SESSION["gebruiker"] ;
-    $email = $_POST['username'];
-    $email = "$email";
-    $wachtwoord = randompassword();
-    $admin = $_POST["admin"]; 
     $mysqli = new mysqli("localhost", "root", "root", "krashosting");
-    $sql1 = "UPDATE package SET visible = $visible1 WHERE idpacket = 1" ;
-
-//    if()
-
-    $sql2 =  "UPDATE package SET visible = $visible2 WHERE idpacket = 2";
-    $sql3 = "UPDATE package SET visible = $visible3 WHERE idpacket = 3";
-    $sql4 = "UPDATE package SET visible = $visible4 WHERE idpacket = 4";
+    $visible1 = $_POST["package_1"];
+    $visible2 = $_POST["package_2"];
+    $visible3 = $_POST["package_3"];
+    $visible4 = $_POST["package_4"];
+    var_dump($_POST);
+    if($_POST["package"] ==  1 ){
+        $sql = "UPDATE package SET visible = $visible1 WHERE idpackage = 1" ;
+    }elseif($_POST["package"] ==  2){
+        $sql =  "UPDATE package SET visible = $visible2 WHERE idpackage = 2";
+    }elseif($_POST["package"] ==  3){
+        $sql = "UPDATE package SET visible = $visible3 WHERE idpackage = 3";
+    }else{
+        $sql = "UPDATE package SET visible = $visible4 WHERE idpackage = 4";
+    }
     $mysqli->real_escape_string($sql);
-    $query = $mysqli->query($sql);   
+    $query = $mysqli->query($sql);  
+   
     header("location:../pages/profiel_pagina.php");     
 }else{
     header("location:../pages/profiel_pagina.php");

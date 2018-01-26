@@ -1,59 +1,70 @@
 <?php
-    $mysqli = new mysqli("localhost", "root", "root", "krashosting");
-    $sql = "SELECT name, description, price FROM package";
-    $query = $mysqli->query($sql);
-    $result = array() ;
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+        $result= "";
+        $mysqli = new mysqli("localhost", "root", "root", "krashosting");
+        $sql = "SELECT * from package";
+        $mysqli->real_escape_string($sql);
+        $query = $mysqli->query($sql); 
+        while($r= $query->fetch_assoc()){  
+            $name = $r["name"];
+            $description = $r["description"];
+            $visible = $r["visible"];
+            if($visible == 1){
+                $result .= "<div class=\"w3-third w3-margin-bottom\">
+                <ul class=\"w3-ul w3-border w3-hover-shadow\">
+                    <li class=\"w3-theme\">
+                        <p class=\"w3-xlarge\">$name</p>
+                    </li>
+                    <li class=\"w3-padding-16\">$description</li>
+                    <li class=\"w3-theme-l5 w3-padding-24\">
+                        <button class=\"w3-button w3-teal w3-padding-large\"><i class=\"fa fa-check\"></i> Sign Up</button>
+                    </li>
+                </ul>
+            </div>";
+            }
+            
+        }
     $i = 0;
-    while($r= $query->fetch_assoc()){
-        if ($r['idpackage'] < 2){
-            $return["$i"] = "{$r["name"]} <br> <br> {$r["description"]} <br> <br> <br> <div> <br> </div><div>&euro;  {$r["price"]} </div> ";
-            $i++;
-        }
-        else{
-            $return["$i"] = "{$r["name"]} <br> <br> {$r["description"]} <br> <br> <br> <div> <br> {$r["price"]} </div>";
-            $i++;
-        }
-
-    }
-//    echo "<pre>";
-//    var_dump("{$return["0"]}");
-//    echo "</pre>";
-//
+   
 ?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>pakketen</title>
+    <title>home</title>
     <link rel="stylesheet" href="../css/master.css" type="text/css">
-    <link rel="stylesheet" href="../css/paketten.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
-    <div class="container">
+
         <div class="banner">
         </div>
-        <ul class="menu">
-            <li class="menuitem"><a href="/index.php">Home</a></li>
-            <li class="menuitem"><a href="contact.html">Contact</a></li>
-            <li class="menuitem"><a href="over_ons.html">over ons</a></li>
-            <li class="active"><a href="pakketen.php">paketten</a></li>
-        </ul>
 
-<<<<<<< Updated upstream
-        <div id="pakket1"><?php echo $return["0"]; ?></div>
-        <div id="pakket2"><?php echo $return["1"]; ?></div>
-        <div id="pakket3"><?php echo $return["2"]; ?></div>
-=======
-        <div id="pakket1"><?php echo $return["0"]; ?>
-            <button type="submit">betalen</button></div>
-        <div id="pakket2"><?php echo $return["1"]; ?>
-            <button type="submit">betalen</button></div>
-        <div id="pakket3"><?php echo $return["2"]; ?>
-            <button type="submit">betalen</button></div>
->>>>>>> Stashed changes
-        <div id="pakket4"><?php echo $return["3"]; ?></div>
-        <button type="submit" id="paypal">Click Me!</button>
+    <ul class="menu">
+        <li class= "menuitem "id="active"><a href="../index.php">Home</a></li>
+        <li class="menuitem"><a href="contact.php">Contact</a></li>
+        <li class="menuitem"><a href="over_ons.php">over ons</a></li>
+        <li class="menuitem"><a href="pakketen.html">paketten</a></li>
+    </ul>
+
+        <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+            <h2>PRICING</h2>
+            <p>Choose a pricing plan that fits your needs.</p><br>
+            <?php
+            echo $result 
+            ?>
+
+            
+</div>
     </div>
-    <script src="/js/betalen.js"></script>
+</div>
 </body>
+
+
 </html>

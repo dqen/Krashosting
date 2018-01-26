@@ -38,6 +38,7 @@
                     
                 
                 $count = 0;
+                //hallo
     $mysqli = new mysqli("localhost", "root", "root", "krashosting");
     $sql = "SELECT * FROM particulier";
     $query = $mysqli->query($sql);

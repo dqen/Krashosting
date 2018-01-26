@@ -11,6 +11,7 @@
             $name = $r["name"];
             $description = $r["description"];
             $visible = $r["visible"];
+            $price = $r["price"];
             if($visible == 1){
                 $result .= "<div class=\"w3-third w3-margin-bottom\">
                 <ul class=\"w3-ul w3-border w3-hover-shadow\">
@@ -18,6 +19,7 @@
                         <p class=\"w3-xlarge\">$name</p>
                     </li>
                     <li class=\"w3-padding-16\">$description</li>
+                    <li class=\"w3-padding-16\">$price</li>
                     <li class=\"w3-theme-l5 w3-padding-24\">
                         <button class=\"w3-button w3-teal w3-padding-large\"><i class=\"fa fa-check\"></i> Sign Up</button>
                     </li>

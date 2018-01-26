@@ -29,7 +29,7 @@
         <li class= "menuitem "id="active"><a href="index.php">Home</a></li>
         <li class="menuitem"><a href="pages/contact.php">Contact</a></li>
         <li class="menuitem"><a href="pages/over_ons.php">over ons</a></li>
-        <li class="menuitem"><a href="pages/pakketen.html">paketten</a></li>
+        <li class="menuitem"><a href="pages/pakketen.php">paketten</a></li>
     </ul>
 <!--        <div class="blended_grid">-->
 <!--            <div class="pageColumnLeft">-->
